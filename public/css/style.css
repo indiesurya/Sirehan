@@ -1,0 +1,15 @@
+body {
+    margin: 69px;
+}
+
+.carousel-inner::after{
+    background-color: black;
+}
+.carousel-item::after{
+    background-color: black;
+}
+
+.img{
+    width: 500px;
+    height: auto;
+}
