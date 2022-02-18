@@ -173,7 +173,7 @@
                 </tr>
             </thead>
             <?php $i = 0;?>
-            @foreach($data['resultspesifikasi'] as $item)
+            @foreach($data['resultnormalisasi'] as $item)
             <tbody>
                 <tr>
                 <th scope="row">{{ $i+1 }}</th>

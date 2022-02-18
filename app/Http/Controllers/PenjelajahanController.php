@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 
 class PenjelajahanController extends Controller
@@ -17,8 +19,8 @@ class PenjelajahanController extends Controller
         $resp = 0;
         if ($request->has('browsing')) {
             $resp++;
-            if($request->browse != ''){
-                $querydata = $this->sparql->query('SELECT * WHERE {?hp handphone:memiliki_Merek handphone:'.$request->browse.'}');
+            if ($request->browse != '') {
+                $querydata = $this->sparql->query('SELECT * WHERE {?hp handphone:memiliki_Merek handphone:' . $request->browse . '}');
             }
             foreach ($querydata as $item) {
                 array_push($resultmerek, [

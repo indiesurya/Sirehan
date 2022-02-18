@@ -40,22 +40,24 @@ class RekomendasiController extends Controller
                     'ul' => $this->parseData($item->ul->getValue())
                 ]);
             }
+            $resultdata = $this->getData($resultcari);
+            $jumlahcari = count($resultdata);
+            $resultspesifikasi = $this->getSpesifikasi($resultdata);
+            $resultbobot = $this->getBobot($resultspesifikasi);
+            $resultnormalisasi = $this->getNormalisasi($resultbobot);
         }
         else
         {
             $resultcari = [];
+            $resultdata = [];
+            $resultspesifikasi = [];
+            $resultbobot = [];
+            $resultnormalisasi = [];
             $jumlahcari = 0;
             $jumlahqueryfilter = 0;
             $queryfilter = [];
             $resp = 0;
         }
-
-        $resultdata = $this->getData($resultcari);
-        $jumlahcari = count($resultdata);
-
-        $resultspesifikasi = $this -> getSpesifikasi($resultdata);
-
-        $resultbobot = $this -> getBobot($resultspesifikasi);
 
         $data = [
             'resp' => $resp,
@@ -65,7 +67,8 @@ class RekomendasiController extends Controller
             'resultspesifikasi' => $resultspesifikasi,
             'jumlahqueryfilter' => $jumlahqueryfilter,
             // 'tampildata' => $resultdata,
-            'resultbobot' => $resultbobot
+            'resultbobot' => $resultbobot,
+            'resultnormalisasi' => $resultnormalisasi
         ];
 
         return view('rekomendasi', [
@@ -175,5 +178,48 @@ class RekomendasiController extends Controller
         }
 
         return $nilai;
+    }
+
+    public function getNormalisasi($data)
+    {
+        $jumlahdata = count($data);
+        $kriteria = [
+            'ram', 'prosesor', 'ukuranlayar', 'kb', 'baterai', 'memori', 'kd', 'so', 'harga'
+
+        ];
+
+        //inisialisasi array masing-masing nilai
+        for($i=0;$i<count($kriteria);$i++)
+        {
+            for($j=0;$j<$jumlahdata;$j++)
+            {
+                $bobot[$kriteria[$i]][$j] = $data[$j][$kriteria[$i]];
+            }
+        }
+
+        //menentukan maksimum dan minimum masing-masing nilai
+        for ($i = 0; $i < count($kriteria); $i++)
+        {
+            if($kriteria[$i]=='harga'){
+                $maxMin[$kriteria[$i]] = min($bobot[$kriteria[$i]]);
+            }
+            else
+            {
+                $maxMin[$kriteria[$i]] = max($bobot[$kriteria[$i]]);
+            }
+        }
+        
+        //melakukan perhitungan minimum dan maksimum
+        for ($i = 0 ; $i < count($kriteria) ; $i++)
+        {
+            for($j = 0 ; $j < $jumlahdata ; $j++)
+            {
+                $normal[$j][$kriteria[$i]] = round($bobot[$kriteria[$i]][$j] / $maxMin[$kriteria[$i]],3);
+            }
+        }
+        for ($i = 0; $i < $jumlahdata ; $i++){
+            $normal[$i]['nama'] = $data[$i]['nama']; 
+        }
+        return $normal;
     }
 } 
