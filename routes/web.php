@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HandphoneController;
 use App\Http\Controllers\PencarianController;
+use App\Http\Controllers\RekomendasiController;
 use App\Http\Controllers\PenjelajahanController;
 
 /*
@@ -20,21 +21,8 @@ use App\Http\Controllers\PenjelajahanController;
 Route::get('/', function () {
     return view('main');
 });
-
 Route::get('/pencarian', [PencarianController::class, 'searching']);
-
-Route::get('/rekomendasi', function () {
-    return view('rekomendasi', [
-        'title' => 'Fitur Rekomendasi',
-        'page' => 'rekomendasi'
-    ]);
-});
+Route::get('/rekomendasi', [RekomendasiController::class, 'rekomendasi']);
 Route::get('/penjelajahan', [PenjelajahanController::class, 'browsing']);
-
 Route::get('/dashboard',[DashboardController::class, 'index']);
-
-Route::get('/tes', function() {
-    return view('tes');
-});
-
 Route::get('/detail_handphone/{nama_handphone}', [HandphoneController::class, 'detail']);

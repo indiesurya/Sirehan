@@ -16,6 +16,7 @@ class HandphoneController extends Controller {
             ?Handphone handphone:memiliki_UkuranLayar ?UkuranLayar.
             ?Handphone handphone:nilai_Harga ?Harga.
         }');
+
         $result=[];
         foreach ($detail as $dtl) {
             array_push($result, [
@@ -28,7 +29,8 @@ class HandphoneController extends Controller {
                 'prosesor' => str_replace('_',' ',$this->parseData($dtl->Prosesor->getUri())),
                 'sistemoperasi' => str_replace('_',' ',$this->parseData($dtl->SistemOperasi->getUri())),
                 'ukuranlayar' => $this->parseData($dtl->UkuranLayar->getUri()),
-                'harga' => $this->parseData($dtl->Harga->getValue())
+                'harga' => $this->parseData($dtl->Harga->getValue()),
+                // 'pros' => $this->parseData($dtl->pros->getValue())
             ]);
         }
         return view('detailhandphone', [
