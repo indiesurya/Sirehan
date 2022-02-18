@@ -193,59 +193,34 @@
             <?php $i++;?>
             @endforeach
         </table>
-        <h5 class="mt-2">4. Perangkingan</h5>
+        <h5 class="mt-2">4. Hasil Pembobotan</h5>
         <table class="table">
             <thead>
                 <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama Handphone</th>
-                <th scope="col">Ukuran Layar</th>
-                <th scope="col">Harga</th>
-                <th scope="col">RAM</th>
-                <th scope="col">Kamera Belakang</th>
-                <th scope="col">Baterai</th>
-                <th scope="col">Memori</th>
-                <th scope="col">Prosesor</th>
-                <th scope="col">Kamera Depan</th>
-                <th scope="col">Sistem Operasi</th>
+                <th scope="col">Hasil</th>
                 </tr>
             </thead>
             <?php $i = 0;?>
-            @foreach($data['resultspesifikasi'] as $item)
+            @foreach($data['resultranking'] as $item)
             <tbody>
                 <tr>
                 <th scope="row">{{ $i+1 }}</th>
                 <td>{{ $item['nama']}}</td>
-                <td>{{ $item['ukuranlayar']}}</td>
-                <td>{{ $item['harga']}}</td>
-                <td>{{ $item['ram']}}</td>
-                <td>{{ $item['kb']}}</td>
-                <td>{{ $item['baterai']}}</td>
-                <td>{{ $item['memori']}}</td>
-                <td>{{ $item['prosesor']}}</td>
-                {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
-                <td>{{ $item['kd']}}</td>
-                <td>{{ $item['so']}}</td>
+                <td>{{ $item['total']}}</td>
                 </tr>
             </tbody>
             <?php $i++;?>
             @endforeach
         </table>
-        <h5 class="mt-2">5. Hasil</h5>
+        <h5 class="mt-2">5. Rangking</h5>
         <table class="table">
             <thead>
                 <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama Handphone</th>
                 <th scope="col">Ukuran Layar</th>
-                <th scope="col">Harga</th>
-                <th scope="col">RAM</th>
-                <th scope="col">Kamera Belakang</th>
-                <th scope="col">Baterai</th>
-                <th scope="col">Memori</th>
-                <th scope="col">Prosesor</th>
-                <th scope="col">Kamera Depan</th>
-                <th scope="col">Sistem Operasi</th>
                 </tr>
             </thead>
             <?php $i = 0;?>
@@ -255,15 +230,6 @@
                 <th scope="row">{{ $i+1 }}</th>
                 <td>{{ $item['nama']}}</td>
                 <td>{{ $item['ukuranlayar']}}</td>
-                <td>{{ $item['harga']}}</td>
-                <td>{{ $item['ram']}}</td>
-                <td>{{ $item['kb']}}</td>
-                <td>{{ $item['baterai']}}</td>
-                <td>{{ $item['memori']}}</td>
-                <td>{{ $item['prosesor']}}</td>
-                {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
-                <td>{{ $item['kd']}}</td>
-                <td>{{ $item['so']}}</td>
                 </tr>
             </tbody>
             <?php $i++;?>
