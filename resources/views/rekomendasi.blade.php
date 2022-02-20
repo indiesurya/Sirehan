@@ -51,6 +51,27 @@
             <option value="4">Instagram</option>
         </select>
     </div>
+    <h1>bobot</h1>
+    <div class="input-group mb-3">
+        <label class="input-group-text" >Bobot Ukuran Kenyamanan</label>
+        <input type="text" class="form-control" name="bobotUl">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text">Bobot Aktivitas Sehari</label>
+        <input type="text" class="form-control" name="bobotBaterai">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text">Budgeet Fotografi</label>
+        <input type="text" class="form-control" name="bobotKamera">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text">Budget Pembelian</label>
+        <input type="text" class="form-control" name="bobotHarga">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text">Budget Lama Aktivitas Sehari</label>
+        <input type="text" class="form-control" name="bobotAplikasi">
+    </div>
     <input type="submit" name="rekomendasi" value="Rekomendasi" class="btn btn-primary">
     @if($data['jumlahcari'] == 0)
     <div class="row">
@@ -140,16 +161,16 @@
                 <tr>
                 <th scope="row">{{ $i+1 }}</th>
                 <td>{{ $item['nama']}}</td>
-                <td>{{ $item['ukuranlayar']}}</td>
-                <td>{{ $item['harga']}}</td>
-                <td>{{ $item['ram']}}</td>
-                <td>{{ $item['kb']}}</td>
-                <td>{{ $item['baterai']}}</td>
-                <td>{{ $item['memori']}}</td>
-                <td>{{ $item['prosesor']}}</td>
+                <td>{{ $item['Ukuran_Layar']}}</td>
+                <td>{{ $item['Harga']}}</td>
+                <td>{{ $item['RAM']}}</td>
+                <td>{{ $item['Kamera_Belakang']}}</td>
+                <td>{{ $item['Baterai']}}</td>
+                <td>{{ $item['Memori']}}</td>
+                <td>{{ $item['Prosesor']}}</td>
                 {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
-                <td>{{ $item['kd']}}</td>
-                <td>{{ $item['so']}}</td>
+                <td>{{ $item['Kamera_Depan']}}</td>
+                <td>{{ $item['Sistem_Operasi']}}</td>
                 </tr>
             </tbody>
             <?php $i++;?>
@@ -178,16 +199,16 @@
                 <tr>
                 <th scope="row">{{ $i+1 }}</th>
                 <td>{{ $item['nama']}}</td>
-                <td>{{ $item['ukuranlayar']}}</td>
-                <td>{{ $item['harga']}}</td>
-                <td>{{ $item['ram']}}</td>
-                <td>{{ $item['kb']}}</td>
-                <td>{{ $item['baterai']}}</td>
-                <td>{{ $item['memori']}}</td>
-                <td>{{ $item['prosesor']}}</td>
+                <td>{{ $item['Ukuran_Layar']}}</td>
+                <td>{{ $item['Harga']}}</td>
+                <td>{{ $item['RAM']}}</td>
+                <td>{{ $item['Kamera_Belakang']}}</td>
+                <td>{{ $item['Baterai']}}</td>
+                <td>{{ $item['Memori']}}</td>
+                <td>{{ $item['Prosesor']}}</td>
                 {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
-                <td>{{ $item['kd']}}</td>
-                <td>{{ $item['so']}}</td>
+                <td>{{ $item['Kamera_Depan']}}</td>
+                <td>{{ $item['Sistem_Operasi']}}</td>
                 </tr>
             </tbody>
             <?php $i++;?>
@@ -220,16 +241,16 @@
                 <tr>
                 <th scope="col">No</th>
                 <th scope="col">Nama Handphone</th>
-                <th scope="col">Ukuran Layar</th>
+                <th scope="col">Hasil</th>
                 </tr>
             </thead>
             <?php $i = 0;?>
-            @foreach($data['resultspesifikasi'] as $item)
+            @foreach($data['resultSAW'] as $item)
             <tbody>
                 <tr>
                 <th scope="row">{{ $i+1 }}</th>
-                <td>{{ $item['nama']}}</td>
-                <td>{{ $item['ukuranlayar']}}</td>
+                <td ><a href="/detail_handphone/{{$item['nama']}}">{{ $item['nama']}}</a></td>
+                <td>{{ $item['total']}}</td>
                 </tr>
             </tbody>
             <?php $i++;?>

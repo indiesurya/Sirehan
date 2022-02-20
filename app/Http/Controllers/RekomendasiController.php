@@ -29,6 +29,7 @@ class RekomendasiController extends Controller
             {
                 $sql = $sql;
             }
+
             $sql = $sql . '}';
             $queryfilter = $this->sparql->query($sql);
             $jumlahqueryfilter = count($queryfilter);
@@ -40,12 +41,67 @@ class RekomendasiController extends Controller
                     'ul' => $this->parseData($item->ul->getValue())
                 ]);
             }
+
+            $bobotUser = [];
+            if ($request->bobotKamera) {
+                array_push($bobotUser, [
+                    'Kamera_Belakang' => $request->bobotKamera
+                ]);
+            }
+            if ($request->bobotHarga) {
+                array_push($bobotUser, [
+                    'Harga' => $request->bobotHarga
+                ]);
+            }
+            if ($request->bobotAplikasi) {
+                array_push($bobotUser, [
+                    'Memori' => $request->bobotAplikasi
+                ]);
+            }
+            if ($request->bobotKamera) {
+                array_push($bobotUser, [
+                    'Kamera_Depan' => $request->bobotKamera
+
+                ]);
+            }
+            if ($request->bobotUl) 
+            {
+                array_push($bobotUser, [
+                    'Ukuran_Layar' => $request->bobotUl
+                ]);
+            }
+            if ($request->bobotBaterai) 
+            {
+                array_push($bobotUser, [
+                    'Baterai' => $request->bobotBaterai
+                ]);
+            }
+            if ($request->bobotAplikasi) {
+                array_push($bobotUser, [
+                    'Prosesor' => $request->bobotAplikasi
+                ]);
+            }   
+            if ($request->bobotAplikasi) {
+                array_push($bobotUser, [
+                    'RAM' => $request->bobotAplikasi
+                ]);
+            }
+            if ($request->bobotAplikasi) {
+                array_push($bobotUser, [
+                    'Sistem_Operasi' => $request->bobotAplikasi
+                ]);
+            }
+            
+
+            //Fungsi
             $resultdata = $this->getData($resultcari);
             $jumlahcari = count($resultdata);
             $resultspesifikasi = $this->getSpesifikasi($resultdata);
             $resultbobot = $this->getBobot($resultspesifikasi);
-            $resultnormalisasi = $this->getNormalisasi($resultbobot);
-            $resultranking = $this->getHasil($resultnormalisasi);
+            $resultkriteria = $this->getKriteria();
+            $resultnormalisasi = $this->getNormalisasi($resultbobot, $resultkriteria);
+            $resultranking = $this->getHasil($resultnormalisasi, $resultkriteria, $bobotUser);
+            $resultSAW = $this->getRanking($resultranking);
         }
         else
         {
@@ -53,8 +109,10 @@ class RekomendasiController extends Controller
             $resultdata = [];
             $resultspesifikasi = [];
             $resultbobot = [];
+            $resultkriteria = [];
             $resultnormalisasi = [];
             $resultranking = [];
+            $resultSAW = [];
             $jumlahcari = 0;
             $jumlahqueryfilter = 0;
             $queryfilter = [];
@@ -70,8 +128,10 @@ class RekomendasiController extends Controller
             'jumlahqueryfilter' => $jumlahqueryfilter,
             // 'tampildata' => $resultdata,
             'resultbobot' => $resultbobot,
+            'resultkriteria' => $resultkriteria,
             'resultnormalisasi' => $resultnormalisasi,
-            'resultranking' => $resultranking
+            'resultranking' => $resultranking,
+            'resultSAW' => $resultSAW
         ];
 
         return view('rekomendasi', [
@@ -97,7 +157,7 @@ class RekomendasiController extends Controller
             $total = count($item['data']);
             for($i=0;$i<$total;$i++){
                 array_push($result, [
-                        'nama' => $this->parseData($item['data'][$i]->hp->getUri())
+                    'nama' => $this->parseData($item['data'][$i]->hp->getUri())
                 ]);
             }
         }
@@ -144,6 +204,20 @@ class RekomendasiController extends Controller
         return $resultdata;
     }
 
+    public function getKriteria ()
+    {
+        $resultquery = [];
+        $query = $this->sparql->query('SELECT * WHERE {?hp a handphone:Kriteria}');
+
+        foreach($query as $item){
+            array_push($resultquery, [
+                'kriteria' =>$this->parseData($item->hp->getUri()) 
+            ]);
+        }
+
+        return $resultquery;
+    }
+
     public function getBobot ($bobot)
     {
         $querynilai = [];
@@ -167,15 +241,15 @@ class RekomendasiController extends Controller
         $nilai = [];
         foreach ($querynilai as $item) {
             array_push($nilai, [
-                'prosesor' => $this->parseData($item['nilaiprosesor'][0]->prosesor->getValue()),
-                'ram' => $this->parseData($item['nilairam'][0]->ram->getValue()),
-                'ukuranlayar' => $this->parseData($item['nilaiukuranlayar'][0]->ul->getValue()),
-                'kb' => $this->parseData($item['nilaikb'][0]->kb->getValue()),
-                'baterai' => $this->parseData($item['nilaibaterai'][0]->baterai->getValue()),
-                'memori' => $this->parseData($item['nilaimemori'][0]->memori->getValue()),
-                'kd' => $this->parseData($item['nilaikd'][0]->kd->getValue()),
-                'so' => $this->parseData($item['nilaiso'][0]->so->getValue()),
-                'harga' => $item['nilaiharga'],
+                'Prosesor' => $this->parseData($item['nilaiprosesor'][0]->prosesor->getValue()),
+                'RAM' => $this->parseData($item['nilairam'][0]->ram->getValue()),
+                'Ukuran_Layar' => $this->parseData($item['nilaiukuranlayar'][0]->ul->getValue()),
+                'Kamera_Belakang' => $this->parseData($item['nilaikb'][0]->kb->getValue()),
+                'Baterai' => $this->parseData($item['nilaibaterai'][0]->baterai->getValue()),
+                'Memori' => $this->parseData($item['nilaimemori'][0]->memori->getValue()),
+                'Kamera_Depan' => $this->parseData($item['nilaikd'][0]->kd->getValue()),
+                'Sistem_Operasi' => $this->parseData($item['nilaiso'][0]->so->getValue()),
+                'Harga' => $item['nilaiharga'],
                 'nama' => $item['nama']
             ]);
         }
@@ -183,20 +257,16 @@ class RekomendasiController extends Controller
         return $nilai;
     }
 
-    public function getNormalisasi($data)
+    public function getNormalisasi($data, $kriteria)
     {
         $jumlahdata = count($data);
-        $kriteria = [
-            'ram', 'prosesor', 'ukuranlayar', 'kb', 'baterai', 'memori', 'kd', 'so', 'harga'
-
-        ];
 
         //inisialisasi array masing-masing nilai
         for($i=0;$i<count($kriteria);$i++)
         {
             for($j=0;$j<$jumlahdata;$j++)
             {
-                $bobot[$kriteria[$i]][$j] = $data[$j][$kriteria[$i]];
+                $bobot[$kriteria[$i]['kriteria']][$j] = $data[$j][$kriteria[$i]['kriteria']];
             }
         }
 
@@ -204,11 +274,11 @@ class RekomendasiController extends Controller
         for ($i = 0; $i < count($kriteria); $i++)
         {
             if($kriteria[$i]=='harga'){
-                $maxMin[$kriteria[$i]] = min($bobot[$kriteria[$i]]);
+                $maxMin[$kriteria[$i]['kriteria']] = min($bobot[$kriteria[$i]['kriteria']]);
             }
             else
             {
-                $maxMin[$kriteria[$i]] = max($bobot[$kriteria[$i]]);
+                $maxMin[$kriteria[$i]['kriteria']] = max($bobot[$kriteria[$i]['kriteria']]);
             }
         }
         
@@ -217,7 +287,7 @@ class RekomendasiController extends Controller
         {
             for($j = 0 ; $j < $jumlahdata ; $j++)
             {
-                $normal[$j][$kriteria[$i]] = round($bobot[$kriteria[$i]][$j] / $maxMin[$kriteria[$i]],3);
+                $normal[$j][$kriteria[$i]['kriteria']] = round($bobot[$kriteria[$i]['kriteria']][$j] / $maxMin[$kriteria[$i]['kriteria']],3);
             }
         }
         for ($i = 0; $i < $jumlahdata ; $i++){
@@ -226,19 +296,14 @@ class RekomendasiController extends Controller
         return $normal;
     }
 
-    public function getHasil ($data)
+    public function getHasil($data, $kriteria, $bobotUser)
     {
-        $bobotUser = [25,25,15,20,10,25,15,25,30];
-        $kriteria = [
-            'ram', 'prosesor', 'ukuranlayar', 'kb', 'baterai', 'memori', 'kd', 'so', 'harga'
-
-        ];
 
         for($i=0;$i<count($kriteria);$i++)
         {
             for($j=0;$j<count($data);$j++)
             {
-                $hasilKali[$j][$kriteria[$i]] = $data[$j][$kriteria[$i]] * $bobotUser[$i];
+                $hasilKali[$j][$kriteria[$i]['kriteria']] = $data[$j][$kriteria[$i]['kriteria']] * $bobotUser[$i][$kriteria[$i]['kriteria']];
             }
         }
 
@@ -247,7 +312,7 @@ class RekomendasiController extends Controller
         {
             for($j=0; $j<count($kriteria) ; $j++)
             {
-                $tempTotal = $tempTotal + $hasilKali[$i][$kriteria[$j]];
+                $tempTotal = $tempTotal + $hasilKali[$i][$kriteria[$j]['kriteria']];
             }
             $total[$i]['total'] = $tempTotal; 
             $tempTotal = 0;
@@ -259,30 +324,30 @@ class RekomendasiController extends Controller
         return $total;
     }
 
-    // public function getResultSAW($data)
-    // {
+    public function getRanking($data)
+    {
         
-    //     $hasilSAW = [];
-    //     for ($i = 0; $i < count($data); $i++) {
-    //         $ranking[$i]['nama'] = $data[$i]['nama'];
-    //         $ranking[$i]['nilai'] = $data[$i]['total'];
-    //     }
+        $hasil = [];
 
-    //     //melakukan sorting dengan menggunakan bubblesort
-    //     for ($j = 0; $j < count($data); $j++) {
-    //         for ($i = 0; $i < count($data); $i++) {
-    //             if (($i + 1) < (count($data)) {
-    //                 if ($hasilSAW[$i]['nilai'] < $hasilSAW[$i + 1]['nilai']) {
-    //                     $tempNilai = $hasilSAW[$i]['nilai'];
-    //                     $hasilSAW[$i]['nilai'] = $hasilSAW[$i + 1]['nilai'];
-    //                     $hasilSAW[$i + 1]['nilai'] = $tempNilai;
-    //                     $tempNama = $hasilSAW[$i]['nama'];
-    //                     $hasilSAW[$i]['nama'] = $hasilSAW[$i + 1]['nama'];
-    //                     $hasilSAW[$i + 1]['nama'] = $tempNama;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     return $hasilSAW;
-    // }
+        //melakukan sorting dengan menggunakan bubblesort
+        for ($i = 0; $i < count($data); $i++) 
+        {
+            for ($j = 0; $j < count($data)-1; $j++) 
+            {
+                if($data[$j]['total'] < $data[$j+1]['total']){
+
+                    $tempNilai = $data[$j]['total'];
+                    $data[$j]['total'] = $data[$j+1]['total'];
+                    $data[$j+1]['total'] = $tempNilai;
+
+                    $tempNama = $data[$j]['nama'];
+                    $data[$j]['nama'] = $data[$j + 1]['nama'];
+                    $data[$j + 1]['nama'] = $tempNama;
+                }
+            }
+        }
+
+        return $data;
+    }
+        
 } 
