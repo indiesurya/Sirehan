@@ -1,76 +1,86 @@
 @extends('layouts.layout')
 @section('container')
 <form action="" method="GET" id="rekomendasi">
-    <div class="input-group mb-3">
-        <label class="input-group-text">Ukuran Kenyamanan</label>
-        <select class="form-select" aria-label="Default select example" name="cari_ukuranlayar">
-            <option selected>Pilihlah salah satu</option>
-            <option value="kecil">Kecil</option>
-            <option value="sedang">Sedang</option>
-            <option value="besar">Besar</option>
-        </select>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="input-group mb-3">
+                <label class="input-group-text">Ukuran Kenyamanan</label>
+                <select class="form-select" aria-label="Default select example" name="cari_ukuranlayar">
+                    <option selected>Pilihlah salah satu</option>
+                    <option value="kecil">Kecil</option>
+                    <option value="sedang">Sedang</option>
+                    <option value="besar">Besar</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <input type="text" class="form-control" name="bobotUl">
+        </div>
+        <div class="col-md-5">
+            <div class="input-group mb-3">
+                <label class="input-group-text">Lama Aktivitas Sehari</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <input type="text" class="form-control" name="bobotBaterai">
+        </div>
     </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text">Lama Aktivitas Sehari</label>
-        <input type="text" class="form-control">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="input-group mb-3">
+                <label class="input-group-text">Budget Pembelian</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <input type="text" class="form-control" name="bobotHarga">
+        </div>
+        <div class="col-md-5">
+            <div class="input-group mb-3">
+                <label class="input-group-text">Fotografi atau Videografi</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <input type="text" class="form-control" name="bobotKamera">
+        </div>
     </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text">Fotografi atau Videografi</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text">Budget Pembelian</label>
-        <input type="text" class="form-control">
-    </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text mt-0">Aplikasi Digunakan</label>
-        <select class="selectpicker form-control" multiple aria-label="size 3 select example">
-            <option value="1">Figma</option>
-            <option value="2">Line</option>
-            <option value="3">Whatsapp</option>
-            <option value="4">Instagram</option>
-            <option value="1">Figma</option>
-            <option value="2">Line</option>
-            <option value="3">Whatsapp</option>
-            <option value="4">Instagram</option>
-            <option value="1">Figma</option>
-            <option value="2">Line</option>
-            <option value="3">Whatsapp</option>
-            <option value="4">Instagram</option>
-            <option value="1">Figma</option>
-            <option value="2">Line</option>
-            <option value="3">Whatsapp</option>
-            <option value="4">Instagram</option>
-            <option value="1">Figma</option>
-            <option value="2">Line</option>
-            <option value="3">Whatsapp</option>
-            <option value="4">Instagram</option>
-            <option value="1">Figma</option>
-            <option value="2">Line</option>
-            <option value="3">Whatsapp</option>
-            <option value="4">Instagram</option>
-        </select>
-    </div>
-    <h1>bobot</h1>
-    <div class="input-group mb-3">
-        <label class="input-group-text" >Bobot Ukuran Kenyamanan</label>
-        <input type="text" class="form-control" name="bobotUl">
-    </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text">Bobot Aktivitas Sehari</label>
-        <input type="text" class="form-control" name="bobotBaterai">
-    </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text">Budgeet Fotografi</label>
-        <input type="text" class="form-control" name="bobotKamera">
-    </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text">Budget Pembelian</label>
-        <input type="text" class="form-control" name="bobotHarga">
-    </div>
-    <div class="input-group mb-3">
-        <label class="input-group-text">Budget Lama Aktivitas Sehari</label>
-        <input type="text" class="form-control" name="bobotAplikasi">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="input-group mb-3">
+                <label class="input-group-text mt-0">Aplikasi Digunakan</label>
+                <select class="selectpicker form-control" multiple aria-label="size 3 select example">
+                    <option value="1">Figma</option>
+                    <option value="2">Line</option>
+                    <option value="3">Whatsapp</option>
+                    <option value="4">Instagram</option>
+                    <option value="1">Figma</option>
+                    <option value="2">Line</option>
+                    <option value="3">Whatsapp</option>
+                    <option value="4">Instagram</option>
+                    <option value="1">Figma</option>
+                    <option value="2">Line</option>
+                    <option value="3">Whatsapp</option>
+                    <option value="4">Instagram</option>
+                    <option value="1">Figma</option>
+                    <option value="2">Line</option>
+                    <option value="3">Whatsapp</option>
+                    <option value="4">Instagram</option>
+                    <option value="1">Figma</option>
+                    <option value="2">Line</option>
+                    <option value="3">Whatsapp</option>
+                    <option value="4">Instagram</option>
+                    <option value="1">Figma</option>
+                    <option value="2">Line</option>
+                    <option value="3">Whatsapp</option>
+                    <option value="4">Instagram</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <input type="text" class="form-control" name="bobotAplikasi">
+        </div>
     </div>
     <input type="submit" name="rekomendasi" value="Rekomendasi" class="btn btn-primary">
     @if($data['jumlahcari'] == 0)
@@ -100,10 +110,10 @@
         </div>
     </div>
     @else
-        <h5 class="mt-2">1. Tabel Spesifikasi Handphone</h5>
-        <table class="table">
+        <h6 class="mt-4 mb-3">1. Tabel Spesifikasi Handphone</h6>
+        <table class="table table-hover">
             <thead>
-                <tr>
+                <tr style="background-color: #4E73DF; color:white; text-center" class="">
                 <th scope="col">No</th>
                 <th scope="col">Nama Handphone</th>
                 <th scope="col">Ukuran Layar</th>
@@ -117,31 +127,35 @@
                 <th scope="col">Sistem Operasi</th>
                 </tr>
             </thead>
+            <tbody>
             <?php $i = 0;?>
             @foreach($data['resultspesifikasi'] as $item)
-            <tbody>
-                <tr>
+                <tr class="table-<?php if($i%2==0) {
+                    echo "secondary";
+                }else{
+                    echo "light";
+                }?>">
                 <th scope="row">{{ $i+1 }}</th>
-                <td>{{ $item['nama']}}</td>
-                <td>{{ $item['ukuranlayar']}}</td>
+                <td>{{ str_replace('_',' ',$item['nama'])}}</td>
+                <td>{{ str_replace('UkuranLayar_','',$item['ukuranlayar'])}}</td>
                 <td>{{ $item['harga']}}</td>
-                <td>{{ $item['ram']}}</td>
-                <td>{{ $item['kb']}}</td>
-                <td>{{ $item['baterai']}}</td>
-                <td>{{ $item['memori']}}</td>
-                <td>{{ $item['prosesor']}}</td>
+                <td>{{ str_replace('RAM_','',$item['ram'])}}</td>
+                <td>{{ str_replace('KB_','',$item['kb'])}}</td>
+                <td>{{ str_replace('Baterai_','',$item['baterai'])}}</td>
+                <td>{{ str_replace('Memori_','',$item['memori'])}}</td>
+                <td>{{ str_replace('_',' ',$item['prosesor'])}}</td>
                 {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
-                <td>{{ $item['kd']}}</td>
-                <td>{{ $item['so']}}</td>
+                <td>{{ str_replace('KD_','',$item['kd'])}}</td>
+                <td>{{ str_replace('_',' ',$item['so'])}}</td>
                 </tr>
-            </tbody>
             <?php $i++;?>
             @endforeach
+            </tbody>
         </table>
-        <h5 class="mt-2">2. Nilai atau Bobot Handphone</h5>
-        <table class="table">
+        <h6 class="mt-4 mb-3">2. Nilai atau Bobot Handphone</h6>
+        <table class="table table-hover">
             <thead>
-                <tr>
+                <tr style="background-color: #4E73DF; color:white; text-center">
                 <th scope="col">No</th>
                 <th scope="col">Nama Handphone</th>
                 <th scope="col">Ukuran Layar</th>
@@ -155,109 +169,126 @@
                 <th scope="col">Sistem Operasi</th>
                 </tr>
             </thead>
+            <tbody>
             <?php $i = 0;?>
             @foreach($data['resultbobot'] as $item)
-            <tbody>
-                <tr>
-                <th scope="row">{{ $i+1 }}</th>
-                <td>{{ $item['nama']}}</td>
-                <td>{{ $item['Ukuran_Layar']}}</td>
-                <td>{{ $item['Harga']}}</td>
-                <td>{{ $item['RAM']}}</td>
-                <td>{{ $item['Kamera_Belakang']}}</td>
-                <td>{{ $item['Baterai']}}</td>
-                <td>{{ $item['Memori']}}</td>
-                <td>{{ $item['Prosesor']}}</td>
-                {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
-                <td>{{ $item['Kamera_Depan']}}</td>
-                <td>{{ $item['Sistem_Operasi']}}</td>
+                <tr class="table-<?php if($i%2==0) {
+                    echo "secondary";
+                }else{
+                    echo "light";
+                }?>">
+                    <th scope="row">{{ $i+1 }}</th>
+                    <td>{{ str_replace('_',' ',$item['nama'])}}</td>
+                    <td>{{ $item['Ukuran_Layar']}}</td>
+                    <td>{{ $item['Harga']}}</td>
+                    <td>{{ $item['RAM']}}</td>
+                    <td>{{ $item['Kamera_Belakang']}}</td>
+                    <td>{{ $item['Baterai']}}</td>
+                    <td>{{ $item['Memori']}}</td>
+                    <td>{{ $item['Prosesor']}}</td>
+                    {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
+                    <td>{{ $item['Kamera_Depan']}}</td>
+                    <td>{{ $item['Sistem_Operasi']}}</td>
                 </tr>
-            </tbody>
             <?php $i++;?>
             @endforeach
+            </tbody>
         </table>
-        <h5 class="mt-2">3. Normalisasi</h5>
-        <table class="table">
+        <h6 class="mt-4 mb-3">3. Normalisasi</h6>
+        <table class="table table-hover">
             <thead>
-                <tr>
-                <th scope="col">No</th>
-                <th scope="col">Nama Handphone</th>
-                <th scope="col">Ukuran Layar</th>
-                <th scope="col">Harga</th>
-                <th scope="col">RAM</th>
-                <th scope="col">Kamera Belakang</th>
-                <th scope="col">Baterai</th>
-                <th scope="col">Memori</th>
-                <th scope="col">Prosesor</th>
-                <th scope="col">Kamera Depan</th>
-                <th scope="col">Sistem Operasi</th>
+                <tr style="background-color: #4E73DF; color:white; text-center">
+                    <th scope="col">No</th>
+                    <th scope="col">Nama Handphone</th>
+                    <th scope="col">Ukuran Layar</th>
+                    <th scope="col">Harga</th>
+                    <th scope="col">RAM</th>
+                    <th scope="col">Kamera Belakang</th>
+                    <th scope="col">Baterai</th>
+                    <th scope="col">Memori</th>
+                    <th scope="col">Prosesor</th>
+                    <th scope="col">Kamera Depan</th>
+                    <th scope="col">Sistem Operasi</th>
                 </tr>
             </thead>
+            <tbody>
             <?php $i = 0;?>
             @foreach($data['resultnormalisasi'] as $item)
-            <tbody>
-                <tr>
-                <th scope="row">{{ $i+1 }}</th>
-                <td>{{ $item['nama']}}</td>
-                <td>{{ $item['Ukuran_Layar']}}</td>
-                <td>{{ $item['Harga']}}</td>
-                <td>{{ $item['RAM']}}</td>
-                <td>{{ $item['Kamera_Belakang']}}</td>
-                <td>{{ $item['Baterai']}}</td>
-                <td>{{ $item['Memori']}}</td>
-                <td>{{ $item['Prosesor']}}</td>
-                {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
-                <td>{{ $item['Kamera_Depan']}}</td>
-                <td>{{ $item['Sistem_Operasi']}}</td>
+                <tr class="table-<?php if($i%2==0) {
+                    echo "secondary";
+                }else{
+                    echo "light";
+                }?>">
+                    <th scope="row">{{ $i+1 }}</th>
+                    <td>{{ str_replace('_',' ',$item['nama'])}}</td>
+                    <td>{{ $item['Ukuran_Layar']}}</td>
+                    <td>{{ $item['Harga']}}</td>
+                    <td>{{ $item['RAM']}}</td>
+                    <td>{{ $item['Kamera_Belakang']}}</td>
+                    <td>{{ $item['Baterai']}}</td>
+                    <td>{{ $item['Memori']}}</td>
+                    <td>{{ $item['Prosesor']}}</td>
+                    {{-- <td>{{ $data['nilai'][0]['nprosesor']}}</td> --}}
+                    <td>{{ $item['Kamera_Depan']}}</td>
+                    <td>{{ $item['Sistem_Operasi']}}</td>
                 </tr>
-            </tbody>
             <?php $i++;?>
             @endforeach
+            </tbody>
         </table>
-        <h5 class="mt-2">4. Hasil Pembobotan</h5>
-        <table class="table">
+        <h6 class="mt-4 mb-3">4. Hasil Pembobotan</h6>
+        <table class="table table-hover">
             <thead>
-                <tr>
+                <tr style="background-color: #4E73DF; color:white; text-center">
                 <th scope="col">No</th>
                 <th scope="col">Nama Handphone</th>
                 <th scope="col">Hasil</th>
                 </tr>
             </thead>
+            <tbody>
             <?php $i = 0;?>
             @foreach($data['resultranking'] as $item)
-            <tbody>
-                <tr>
-                <th scope="row">{{ $i+1 }}</th>
-                <td>{{ $item['nama']}}</td>
-                <td>{{ $item['total']}}</td>
+                <tr class="table-<?php if($i%2==0) {
+                    echo "secondary";
+                }else{
+                    echo "light";
+                }?>">
+                    <th scope="row">{{ $i+1 }}</th>
+                    <td>{{ str_replace('_',' ',$item['nama'])}}</td>
+                    <td>{{ $item['total']}}</td>
                 </tr>
-            </tbody>
             <?php $i++;?>
             @endforeach
+            </tbody>
         </table>
-        <h5 class="mt-2">5. Rangking</h5>
-        <table class="table">
+        <h6 class="mt-4 mb-3">5. Ranking</h6>
+        <table class="table table-hover">
             <thead>
-                <tr>
+                <tr style="background-color: #4E73DF; color:white; text-center">
                 <th scope="col">No</th>
                 <th scope="col">Nama Handphone</th>
                 <th scope="col">Hasil</th>
                 </tr>
             </thead>
+            <tbody>
             <?php $i = 0;?>
             @foreach($data['resultSAW'] as $item)
-            <tbody>
-                <tr>
-                <th scope="row">{{ $i+1 }}</th>
-                <td ><a href="/detail_handphone/{{$item['nama']}}">{{ $item['nama']}}</a></td>
-                <td>{{ $item['total']}}</td>
+                <tr class="table-<?php if($i%2==0) {
+                    echo "secondary";
+                }else{
+                    echo "light";
+                }?>">
+                    <th scope="row">{{ $i+1 }}</th>
+                    <td> <a style="text-decoration:none; color:black;" href="/detail_handphone/{{$item['nama']}}">{{ str_replace('_',' ',$item['nama'])}}</a></td>
+                    <td>{{ $item['total']}}</td>
                 </tr>
-            </tbody>
             <?php $i++;?>
             @endforeach
+            </tbody>
         </table>
     @endif
 </form>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

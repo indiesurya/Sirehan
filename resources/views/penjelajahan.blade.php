@@ -30,7 +30,7 @@
                     @else
                         @foreach ($data['result'] as $item)
                         <ul class="list-group list-group-flush">
-                            <a href="/detail_handphone/{{$item['browse']}}" class="list-group-item list-group-item-action">{{ $item['browse'] }}</li></a>
+                            <a href="/detail_handphone/{{$item['browse']}}" class="list-group-item list-group-item-action">{{ str_replace('_',' ',$item['browse']) }}</li></a>
                         </ul>
                         @endforeach
                     @endif

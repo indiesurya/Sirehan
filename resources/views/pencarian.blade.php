@@ -17,7 +17,7 @@
                         <select class="form-select" aria-label="Default select example" id="cari_ram" name="cari_ram">
                             <option value="">Pilihlah salah satu</option>
                             @foreach($list['listram'] as $item)
-                                <option value="{{ $item['ram'] }}">{{ $item['ram'] }} GB</option>
+                                <option value="{{ $item['ram'] }}">{{ str_replace('RAM_','',$item['ram'])}}  GB</option>
                             @endforeach
                         </select>
                     </div>
@@ -28,7 +28,7 @@
                         <select class="form-select" aria-label="Default select example" id="cari_baterai" name="cari_baterai">
                             <option value="">Pilihlah salah satu</option>
                             @foreach($list['listbaterai'] as $item)
-                                <option value="{{ $item['baterai'] }}">{{ $item['baterai'] }} mAh</option>
+                                <option value="{{ $item['baterai'] }}">{{ str_replace('Baterai_','',$item['baterai']) }} mAh</option>
                             @endforeach
                         </select>
                     </div>
@@ -39,7 +39,7 @@
                         <select class="form-select" aria-label="Default select example"id="cari_kameradepan" name="cari_kameradepan">
                             <option value="">Pilihlah salah satu</option>
                             @foreach($list['listkameradepan'] as $item)
-                                <option value="{{ $item['kameradepan'] }}">{{ $item['kameradepan'] }} MP</option>
+                                <option value="{{ $item['kameradepan'] }}">{{ str_replace('KD_','',$item['kameradepan'])}} MP</option>
                             @endforeach
                         </select>
                     </div>
@@ -52,7 +52,7 @@
                         <select class="form-select" aria-label="Default select example"id="cari_kamerabelakang" name="cari_kamerabelakang">
                             <option value="">Pilihlah salah satu</option>
                             @foreach($list['listkamerabelakang'] as $item)
-                                <option value="{{ $item['kamerabelakang'] }}">{{ $item['kamerabelakang'] }} MP</option>
+                                <option value="{{ $item['kamerabelakang'] }}">{{ str_replace('KB_','',$item['kamerabelakang'])}} MP</option>
                             @endforeach
                         </select>
                     </div>
@@ -63,7 +63,7 @@
                         <select class="form-select" aria-label="Default select example" id="cari_memori" name="cari_memori">
                             <option value="">Pilihlah salah satu</option>
                             @foreach($list['listmemori'] as $item)
-                                <option value="{{ $item['memori'] }}">{{ $item['memori'] }} GB</option>
+                                <option value="{{ $item['memori'] }}">{{ str_replace('Memori_','',$item['memori']) }} GB</option>
                             @endforeach
                         </select>
                     </div>
@@ -74,7 +74,7 @@
                         <select class="form-select" aria-label="Default select example" id="cari_sistemoperasi" name="cari_sistemoperasi">
                             <option value="">Pilihlah salah satu</option>
                             @foreach($list['listsistemoperasi'] as $item)
-                                <option value="{{ $item['sistemoperasi'] }}">{{ $item['sistemoperasi'] }}</option>
+                                <option value="{{ $item['sistemoperasi'] }}">{{ str_replace('_',' ',str_replace('SO_','',$item['sistemoperasi'])) }} </option>
                             @endforeach
                         </select>
                     </div>
@@ -87,7 +87,7 @@
                         <select class="form-select" aria-label="Default select example"id="cari_ukuranlayar" name="cari_ukuranlayar">
                             <option value="">Pilihlah salah satu</option>
                             @foreach($list['listukuranlayar'] as $item)
-                                <option value="{{ $item['ukuranlayar'] }}">{{ $item['ukuranlayar'] }} inch</option>
+                                <option value="{{ $item['ukuranlayar'] }}">{{ str_replace('UkuranLayar_','',$item['ukuranlayar'])}}  inch</option>
                             @endforeach
                         </select>
                     </div>
@@ -98,7 +98,7 @@
                         <select class="form-select" aria-label="Default select example" id="cari_prosesor" name="cari_prosesor">
                             <option value="">Pilihlah salah satu</option>
                             @foreach($list['listprosesor'] as $item)
-                                <option value="{{ $item['prosesor'] }}">{{ $item['prosesor'] }}</option>
+                                <option value="{{ $item['prosesor'] }}">{{ str_replace('_',' ',str_replace('Prosesor_','',$item['prosesor'])) }} </option>
                             @endforeach
                         </select>
                     </div>
@@ -130,7 +130,7 @@
                     @else
                         @foreach ($list['searching1'] as $item)
                         <ul class="list-group list-group-flush">
-                            <a href="/detail_handphone/{{$item['nama']}}" class="list-group-item list-group-item-action">{{ $item['nama'] }}</li></a>
+                            <a href="/detail_handphone/{{$item['nama']}}" class="list-group-item list-group-item-action">{{ str_replace('_',' ',$item['nama']) }}</li></a>
                         </ul>
                         @endforeach
                     @endif

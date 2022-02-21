@@ -24,10 +24,10 @@
         <div class="card">
             <img src="img/hp1.png" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{ $hp['nama_handphone'] }}</h5>
+                <h5 class="card-title">{{ str_replace('_',' ',$hp['nama_handphone'])  }}</h5>
                 <?php $nama_handphone = str_replace(' ','_',$hp['nama_handphone']) ?>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/detail_handphone/{{$nama_handphone}}" class="btn btn-primary">Go somewhere</a>
+                <p class="card-text">Rp.{{  $hp['harga'] }}</p>
+                <a href="/detail_handphone/{{$hp['nama_handphone']}}" class="btn btn-primary">Detail</a>
             </div>
         </div>
     </div>

@@ -111,7 +111,6 @@
                 <a class="nav-link" href="#">About</a>
                 <a class="nav-link" href="#">Features</a>
                 <a class="nav-link" href="#">Gallery</a>
-                <a class="nav-link disabled">Disabled</a>
             </div>
             </div>
         </div>

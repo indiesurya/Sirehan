@@ -2,7 +2,7 @@
 @extends('layouts.layout')
 @section('container')
 <style>
-    span{
+    p span{
         font-weight: bold;
     }
 </style>
@@ -18,42 +18,40 @@
             <h5 class="mb-3">Spesification :</h5>
             <p class="card-text">
                 <span>RAM :</span>
-                {{ $dtl['ram']}} GB
+                {{ str_replace('RAM_','',$dtl['ram'])}} GB
             </p>
             <p class="card-text">
                 <span>Baterai :</span>
-                {{ $dtl['baterai']}} mAh
+                {{ str_replace('Baterai_','',$dtl['baterai']) }} mAh
             </p>
             <p class="card-text">
                 <span>Memori :</span>
-                {{ $dtl['memori']}} GB
+                {{ str_replace('Memori_','',$dtl['memori']) }} GB
             </p>
             <p class="card-text">
                 <span>Prosesor :</span>
-                {{ $dtl['prosesor']}} 
+                {{ str_replace('Prosesor_','',$dtl['prosesor']) }} 
             </p>
             <p class="card-text">
                 <span>Sistem Operasi :</span>
-                {{ $dtl['sistemoperasi']}} 
+                {{ str_replace('SO_','',$dtl['sistemoperasi'])}} 
             </p>
             <p class="card-text">
                 <span>Kamera Depan :</span>
-                {{ $dtl['kameradepan']}} MP 
+                {{ str_replace('KD_','',$dtl['kameradepan'])}} MP 
             </p>
             <p class="card-text">
                 <span>Kamera Belakang :</span>
-                {{ $dtl['kamerabelakang']}} MP
+                {{ str_replace('KB_','',$dtl['kamerabelakang'])}} MP
             </p>
             <p class="card-text">
                 <span>Ukuran Layar :</span>
-                {{ $dtl['ukuranlayar']}} inci
+                {{ str_replace('UkuranLayar_','',$dtl['ukuranlayar'])}} inci
             </p>
             <p class="card-text">
                 <span>Harga :</span>
                 Rp.{{ $dtl['harga']}}
             </p>
-            
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
         </div>
         </div>
     </div>
