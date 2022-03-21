@@ -6,15 +6,15 @@ class HandphoneController extends Controller {
     {
         $detail = $this->sparql->query('SELECT * WHERE
         {VALUES ?Handphone{handphone:'.$nama_handphone.'}.
-            ?Handphone handphone:memiliki_RAM ?RAM.
-            ?Handphone handphone:memiliki_Baterai ?Baterai.
-            ?Handphone handphone:memiliki_KameraDepan ?KameraDepan.
-            ?Handphone handphone:memiliki_KameraBelakang ?KameraBelakang.
-            ?Handphone handphone:memiliki_Memori ?Memori.
-            ?Handphone handphone:memiliki_Prosesor ?Prosesor.
-            ?Handphone handphone:memiliki_SistemOperasi ?SistemOperasi.
-            ?Handphone handphone:memiliki_UkuranLayar ?UkuranLayar.
-            ?Handphone handphone:nilai_Harga ?Harga.
+            ?Handphone handphone:memilikiRAM ?RAM.
+            ?Handphone handphone:memilikiBaterai ?Baterai.
+            ?Handphone handphone:memilikiKameraDepan ?KameraDepan.
+            ?Handphone handphone:memilikiKameraBelakang ?KameraBelakang.
+            ?Handphone handphone:memilikiMemori ?Memori.
+            ?Handphone handphone:memilikiProsesor ?Prosesor.
+            ?Handphone handphone:memilikiSistemOperasi ?SistemOperasi.
+            ?Handphone handphone:memilikiUkuranLayar ?UkuranLayar.
+            ?Handphone handphone:nilaiHarga ?Harga.
         }');
 
         $result=[];

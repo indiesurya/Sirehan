@@ -88,17 +88,17 @@ class PencarianController extends Controller
                 'prosesor' => $this->parseData($item->qualcomm->getUri())
             ]);
         }
-        if ($request->has('cari_spesifikasi')) {
+        if ($request->has('cari_spesifikasi') != '') {
             $resp = 1;
             $sql = 'SELECT * WHERE {';
             $i = 0;
             if($request->cari_ram != ''){
                 if ( $i == 0 ){
-                    $sql = $sql . '?hp handphone:memiliki_RAM handphone:' . $request->cari_ram;
+                    $sql = $sql . '?hp handphone:memilikiRAM handphone:' . $request->cari_ram;
                     $i++;
                 }
                 else{
-                    $sql = $sql . '. ?hp handphone:memiliki_RAM handphone:' . $request->cari_ram;
+                    $sql = $sql . '. ?hp handphone:memilikiRAM handphone:' . $request->cari_ram;
                 }
             }
             else{
@@ -106,11 +106,11 @@ class PencarianController extends Controller
             }
             if ($request->cari_baterai!= '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memiliki_Baterai handphone:' . $request->cari_baterai;
+                    $sql = $sql . '?hp handphone:memilikiBaterai handphone:' . $request->cari_baterai;
                     $i++;
                 }
                 else{
-                    $sql = $sql . '. ?hp handphone:memiliki_Baterai handphone:' . $request->cari_baterai;
+                    $sql = $sql . '. ?hp handphone:memilikiBaterai handphone:' . $request->cari_baterai;
                 } 
             } 
             else {
@@ -118,11 +118,11 @@ class PencarianController extends Controller
             }
             if ($request->cari_kameradepan!= '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memiliki_KameraDepan handphone:' . $request->cari_kameradepan;
+                    $sql = $sql . '?hp handphone:memilikiKameraDepan handphone:' . $request->cari_kameradepan;
                     $i++;
                 } 
                 else {
-                    $sql = $sql . '. ?hp handphone:memiliki_KameraDepan handphone:' . $request->cari_kameradepan;
+                    $sql = $sql . '. ?hp handphone:memilikiKameraDepan handphone:' . $request->cari_kameradepan;
                 }   
             } 
             else {
@@ -130,11 +130,11 @@ class PencarianController extends Controller
             }
             if ($request->cari_kamerabelakang!= '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memiliki_KameraBelakang handphone:' . $request->cari_kamerabelakang;
+                    $sql = $sql . '?hp handphone:memilikiKameraBelakang handphone:' . $request->cari_kamerabelakang;
                     $i++;
                 } 
                 else {
-                    $sql = $sql . '. ?hp handphone:memiliki_KameraBelakang handphone:' . $request->cari_kamerabelakang;
+                    $sql = $sql . '. ?hp handphone:memilikiKameraBelakang handphone:' . $request->cari_kamerabelakang;
                 }  
             } 
             else {
@@ -142,11 +142,11 @@ class PencarianController extends Controller
             }
             if ($request->cari_memori!= '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memiliki_Memori handphone:' . $request->cari_memori;
+                    $sql = $sql . '?hp handphone:memilikiMemori handphone:' . $request->cari_memori;
                     $i++;
                 } 
                 else {
-                    $sql = $sql . '. ?hp handphone:memiliki_Memori handphone:' . $request->cari_memori;
+                    $sql = $sql . '. ?hp handphone:memilikiMemori handphone:' . $request->cari_memori;
                 }  
             } 
             else {
@@ -154,11 +154,11 @@ class PencarianController extends Controller
             }
             if ($request->cari_sistemoperasi!= '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memiliki_SistemOperasi handphone:' . $request->cari_sistemoperasi;
+                    $sql = $sql . '?hp handphone:memilikiSistemOperasi handphone:' . $request->cari_sistemoperasi;
                     $i++;
                 } 
                 else {
-                    $sql = $sql . '. ?hp handphone:memiliki_SistemOperasi handphone:' . $request->cari_sistemoperasi;
+                    $sql = $sql . '. ?hp handphone:memilikiSistemOperasi handphone:' . $request->cari_sistemoperasi;
                 }  
             } 
             else {
@@ -166,11 +166,11 @@ class PencarianController extends Controller
             }
             if ($request->cari_ukuranlayar!= '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memiliki_UkuranLayar handphone:' . $request->cari_ukuranlayar;
+                    $sql = $sql . '?hp handphone:memilikiUkuranLayar handphone:' . $request->cari_ukuranlayar;
                     $i++;
                 } 
                 else {
-                    $sql = $sql . '?hp handphone:memiliki_UkuranLayar handphone:' . $request->cari_ukuranlayar;
+                    $sql = $sql . '. ?hp handphone:memilikiUkuranLayar handphone:' . $request->cari_ukuranlayar;
                 }  
                 
             } 
@@ -179,43 +179,39 @@ class PencarianController extends Controller
             }
             if ($request->cari_prosesor != '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memiliki_Prosesor handphone:' . $request->cari_prosesor;
+                    $sql = $sql . '?hp handphone:memilikiProsesor handphone:' . $request->cari_prosesor;
                     $i++;
                 } else {
-                    $sql = $sql . '?hp handphone:memiliki_Prosesor handphone:' . $request->cari_prosesor;
+                    $sql = $sql . '. ?hp handphone:memilikiProsesor handphone:' . $request->cari_prosesor;
                 }
             } else {
                 $sql = $sql;
             }
             if ($request->cari_harga != '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:nilai_Harga ?harga FILTER(?harga <' . $request->cari_harga.')';
+                    $sql = $sql . '?hp handphone:nilaiHarga ?harga FILTER(?harga <' . $request->cari_harga.')';
                     $i++;
                 } else {
-                    $sql = $sql .'?hp handphone:nilai_Harga ?harga FILTER(?harga <' . $request->cari_harga . ')';
+                    $sql = $sql .'. ?hp handphone:nilaiHarga ?harga FILTER(?harga <' . $request->cari_harga . ')';
                 }
             } else {
                 $sql = $sql;
             }
             $sql = $sql . '}';
             $querydata = $this->sparql->query($sql);
-
             $resulthandphone = [];
-
-            //meyimpan data nama dan id motor
-            foreach ($querydata as $item) {
-                array_push($resulthandphone, [
-                    'nama' => $this->parseData($item->hp->getUri())
-                ]);
+            if($i===0){
+                $resulthandphone = [];
+            }
+            else
+            {
+                foreach ($querydata as $item) {
+                    array_push($resulthandphone, [
+                        'nama' => $this->parseData($item->hp->getUri())
+                    ]);
+                }
             }
             $jumlahhandphone = count($resulthandphone);
-
-            // $getMerek = $request->cari_merek;
-            // $getTransmisi = $request->cari_transmisi;
-            // $getJenis = $request->cari_typemotor;
-            // $getTahun = $request->cari_tahun;
-            // $getVolume = $request->cari_volume;
-            // $getLokasi = '';
         }
         else{
             $resulthandphone = [];
@@ -223,7 +219,6 @@ class PencarianController extends Controller
             $resp = 0;
         }
         
-
         $data = [
             'listram' => $resultram,
             'listmemori' => $resultmemori,
@@ -237,18 +232,13 @@ class PencarianController extends Controller
             'jumlahhandphone' => $jumlahhandphone,
             'resp' => $resp
         ];
-
-        // $harga = $this->sparql->query('SELECT * WHERE {
-        //     ?hp handphone:memiliki_RAM handphone:4 }');
             
         return view('pencarian', [
             'title' => 'Fitur Pencarian',
             'page' => 'pencarian', 
             'list' =>  $data
         ]);
-
     }
-
 }
 
 ?>

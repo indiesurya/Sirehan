@@ -5,8 +5,8 @@
         <div class="col-md-5">
             <div class="input-group mb-3">
                 <label class="input-group-text">Ukuran Kenyamanan</label>
-                <select class="form-select" aria-label="Default select example" name="cari_ukuranlayar">
-                    <option selected>Pilihlah salah satu</option>
+                <select class="form-select" aria-label="Default select example" name="cariUkuranLayar">
+                    <option value="">Pilihlah salah satu</option>
                     <option value="kecil">Kecil</option>
                     <option value="sedang">Sedang</option>
                     <option value="besar">Besar</option>
@@ -18,8 +18,8 @@
         </div>
         <div class="col-md-5">
             <div class="input-group mb-3">
-                <label class="input-group-text">Lama Aktivitas Sehari</label>
-                <input type="text" class="form-control">
+                <label class="input-group-text">Lama Travelling</label>
+                <input type="text" class="form-control" name="cariBaterai" >
             </div>
         </div>
         <div class="col-md-1">
@@ -30,7 +30,7 @@
         <div class="col-md-5">
             <div class="input-group mb-3">
                 <label class="input-group-text">Budget Pembelian</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="cariHarga" >
             </div>
         </div>
         <div class="col-md-1">
@@ -38,8 +38,12 @@
         </div>
         <div class="col-md-5">
             <div class="input-group mb-3">
-                <label class="input-group-text">Fotografi atau Videografi</label>
-                <input type="text" class="form-control">
+                <label class="input-group-text">Hobi Fotografi</label>
+                <select class="form-select" aria-label="Default select example" name="cariKamera">
+                    <option value=''>Pilihlah salah satu</option>
+                    <option value="1">Iya</option>
+                    <option value="0">Tidak</option>
+                </select>
             </div>
         </div>
         <div class="col-md-1">
@@ -50,31 +54,10 @@
         <div class="col-md-5">
             <div class="input-group mb-3">
                 <label class="input-group-text mt-0">Aplikasi Digunakan</label>
-                <select class="selectpicker form-control" multiple aria-label="size 3 select example">
-                    <option value="1">Figma</option>
-                    <option value="2">Line</option>
-                    <option value="3">Whatsapp</option>
-                    <option value="4">Instagram</option>
-                    <option value="1">Figma</option>
-                    <option value="2">Line</option>
-                    <option value="3">Whatsapp</option>
-                    <option value="4">Instagram</option>
-                    <option value="1">Figma</option>
-                    <option value="2">Line</option>
-                    <option value="3">Whatsapp</option>
-                    <option value="4">Instagram</option>
-                    <option value="1">Figma</option>
-                    <option value="2">Line</option>
-                    <option value="3">Whatsapp</option>
-                    <option value="4">Instagram</option>
-                    <option value="1">Figma</option>
-                    <option value="2">Line</option>
-                    <option value="3">Whatsapp</option>
-                    <option value="4">Instagram</option>
-                    <option value="1">Figma</option>
-                    <option value="2">Line</option>
-                    <option value="3">Whatsapp</option>
-                    <option value="4">Instagram</option>
+                <select class="form-control selectpicker" multiple name="cariAplikasi[]">
+                    @foreach($data['rowAplikasi'] as $item)
+                        <option value="{{ $item['aplikasi'] }}">{{ str_replace('_',' ',$item['aplikasi']) }} </option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -83,20 +66,8 @@
         </div>
     </div>
     <input type="submit" name="rekomendasi" value="Rekomendasi" class="btn btn-primary">
-    @if($data['jumlahcari'] == 0)
-    <div class="row">
-        <div class="col-lg-6 mb-4 mt-4">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Hasil Pencarian</h6>
-                </div>
-                <div class="card-body">
-                    <h4 class="small font-weight-bold">Tidak terdapat pencarian data<span> </h4>
-                </div>
-            </div>
-        </div>
-    </div>             
-    @elseif($data['resp'] == 1 && $data['jumlahcari'] == 0)
+    <input type="submit" name="reset" value="Reset" class="btn btn-danger">
+    @if($data['jumlahCari'] == 0 && $data['resp'] == 0)
     <div class="row">
         <div class="col-lg-6 mb-4 mt-4">
             <div class="card shadow mb-4">
@@ -105,6 +76,19 @@
                 </div>
                 <div class="card-body">
                     <h4 class="small font-weight-bold">Belum terdapat pencarian data<span> </h4>
+                </div>
+            </div>
+        </div>
+    </div>             
+    @elseif($data['resp'] == 1 && $data['jumlahCari'] == 0)
+    <div class="row">
+        <div class="col-lg-6 mb-4 mt-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Hasil Pencarian</h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="small font-weight-bold">Tidak terdapat pencarian data<span> </h4>
                 </div>
             </div>
         </div>
@@ -182,7 +166,7 @@
                     <td>{{ $item['Ukuran_Layar']}}</td>
                     <td>{{ $item['Harga']}}</td>
                     <td>{{ $item['RAM']}}</td>
-                    <td>{{ $item['Kamera_Belakang']}}</td>
+                    <td>{{ intval($item['Kamera_Belakang'])}}</td>
                     <td>{{ $item['Baterai']}}</td>
                     <td>{{ $item['Memori']}}</td>
                     <td>{{ $item['Prosesor']}}</td>
@@ -289,6 +273,10 @@
     @endif
 </form>
 
+<script>
+    var select = document.getElementById('cariAplikasi');
+    multi(select,[]);
+</script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

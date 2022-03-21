@@ -20,12 +20,16 @@ class PenjelajahanController extends Controller
         if ($request->has('browsing')) {
             $resp++;
             if ($request->browse != '') {
-                $querydata = $this->sparql->query('SELECT * WHERE {?hp handphone:memiliki_Merek handphone:' . $request->browse . '}');
+                $querydata = $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiMerek handphone:' . $request->browse . '}');
+                
+                foreach ($querydata as $item) {
+                    array_push($resultmerek, [
+                        'browse' => $this->parseData($item->hp->getUri())
+                    ]);
+                }
             }
-            foreach ($querydata as $item) {
-                array_push($resultmerek, [
-                    'browse' => $this->parseData($item->hp->getUri())
-                ]);
+            else{
+                $resultmerek = [];
             }
         }
         $jumlahbrowse = count($resultmerek);
@@ -42,6 +46,6 @@ class PenjelajahanController extends Controller
             'page' => 'penjelajahan',
             'data' => $data
         ]);
-    }
+    }   
 }
 ?>

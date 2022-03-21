@@ -17,7 +17,7 @@ class DashboardController extends Controller
         $resultharga = [];
         foreach ($result as $item){
             array_push($resultharga, [
-                'harga' => $this->sparql->query('SELECT * WHERE{VALUES ?hp{handphone:'.$item['nama_handphone'].'}.?hp handphone:nilai_Harga ?harga.}'),
+                'harga' => $this->sparql->query('SELECT * WHERE{VALUES ?hp{handphone:'.$item['nama_handphone'].'}.?hp handphone:nilaiHarga ?harga.}'),
             ]);
         }
         $resultdashboard = [];

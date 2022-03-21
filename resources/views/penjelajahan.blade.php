@@ -15,6 +15,7 @@
         </div>
     </div>
     <input type="submit" name="browsing" value="Jelajah" class="btn btn-primary">
+    <input type="submit" name="reset" value="Reset" class="btn btn-danger">
 </form>
 <div class="row">
         <div class="col-lg-6 mb-4 mt-4">
