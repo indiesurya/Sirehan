@@ -22,7 +22,7 @@
 @foreach($handphone['handphone'] as $hp)
     <div class="col-md-3 col-sm-6 mb-2 justify-content-center">
         <div class="card">
-            <img src="img/hp1.png" class="card-img-top" alt="...">
+            <img src="img/handphone/{{ $hp['gambar'] }}" class="card-img-top" alt="..." style="width:200px; height:200px;">
             <div class="card-body">
                 <h5 class="card-title">{{ str_replace('_',' ',$hp['nama_handphone'])  }}</h5>
                 <?php $nama_handphone = str_replace(' ','_',$hp['nama_handphone']) ?>

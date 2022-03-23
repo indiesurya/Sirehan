@@ -17,15 +17,16 @@ class DashboardController extends Controller
         $resultharga = [];
         foreach ($result as $item){
             array_push($resultharga, [
-                'harga' => $this->sparql->query('SELECT * WHERE{VALUES ?hp{handphone:'.$item['nama_handphone'].'}.?hp handphone:nilaiHarga ?harga.}'),
+                'data' => $this->sparql->query('SELECT * WHERE{VALUES ?hp{handphone:'.$item['nama_handphone'].'}.?hp handphone:nilaiHarga ?harga.?hp handphone:memilikiGambar ?gambar}'),
             ]);
         }
         $resultdashboard = [];
         foreach ($resultharga as $item){
-            for ($i=0; $i <count($item['harga']); $i++) {
+            for ($i=0; $i <count($item['data']); $i++) {
                 array_push($resultdashboard, [
-                    'nama_handphone' => $this->parseData($item['harga'][$i]->hp->getUri()),
-                    'harga' => $this->parseData($item['harga'][$i]->harga->getValue())
+                    'nama_handphone' => $this->parseData($item['data'][$i]->hp->getUri()),
+                    'harga' => $this->parseData($item['data'][$i]->harga->getValue()),
+                    'gambar' => $this->parseData($item['data'][$i]->gambar->getValue())
                 ]);
             }
         }

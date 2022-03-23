@@ -26,6 +26,7 @@ class Controller extends BaseController
 
         $this->sparql = new Client('http://127.0.0.1:3030/handphone/query');
     }
+    
     public function parseData($str)
     {
         return str_replace('http://www.semanticweb.org/indiesurya/OntologiHandphone#', '', $str);
