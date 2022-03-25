@@ -84,7 +84,6 @@ class RekomendasiController extends Controller
         ]);
     }
 
-
     public function getKenyamanan($kriteria)
     {
         if ($kriteria != '') 

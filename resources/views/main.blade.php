@@ -96,6 +96,9 @@
             padding-bottom:20px;
             position: relative;
         }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -106,11 +109,11 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+            <div class="navbar-nav" id="nav">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#">About</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#features">Features</a>
+                <a class="nav-link" href="#gallery">Gallery</a>
             </div>
             </div>
         </div>
@@ -155,7 +158,7 @@
     </div>
     <div class="container mt-5 mb-5 pt-1">
         <div class="row">
-            <div class="col-sm-12 col-lg-7">
+            <div class="col-sm-12 col-lg-7" id="about">
                 <h1 class="fw-bold fst-italic mt-5 mb-3">SIREHAN</b></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aliquam nobis fuga, ratione ipsa possimus fugiat quae accusantium tempora atque ullam dicta odio beatae esse, nemo distinctio dolores quo totam mollitia commodi nulla, sapiente cum. Porro nisi quia ullam sint officia, quis iure cum laboriosam deleniti at iusto, officiis eos!</p>
                 <a class="btn btn-primary" href="/dashboard" role="button">Kunjungi</a>
@@ -169,7 +172,7 @@
     <div class="fitur">
         <div class="container">
             <div class="row">
-                <h1 class="text-white text-center mt-4 mb-2">Features</h1>
+                <h1 class="text-white text-center mt-4 mb-2" id="features">Features</h1>
                 <div class="features mt-4 mb-5">
                     <div class="row">
                         <div class="col-md-4 col-sm-12 mt-1 mb-2">
@@ -210,7 +213,7 @@
     <div class="gallery mt-4 mb-5 pt-1">
         <div class="container">
             <div class="gallery">
-                <h1 class="mb-5 text-center">Gallery</h1>
+                <h1 class="mb-5 text-center" id="gallery">Gallery</h1>
                 <div class="row">
                     <?php for ($i=0; $i <8; $i++) : ?>
                     <div class="col-md-6 col-sm-6 col-lg-3">
