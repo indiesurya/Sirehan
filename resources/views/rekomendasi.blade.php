@@ -2,7 +2,7 @@
 @section('container')
 <form action="" method="GET" id="rekomendasi">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-lg-5 col-md-9 col-sm-9">
             <div class="input-group mb-3">
                 <label class="input-group-text">Ukuran Kenyamanan</label>
                 <select class="form-select" aria-label="Default select example" name="cariUkuranLayar">
@@ -13,30 +13,30 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-1">
-            <input type="text" class="form-control" name="bobotUl">
+        <div class="col-lg-1 col-md-3 col-sm mb-3">
+            <input type="text" class="form-control" placeholder="Bobot"name="bobotUl">
         </div>
-        <div class="col-md-5">
+        <div class="col-lg-5 col-md-9 col-sm-9">
             <div class="input-group mb-3">
                 <label class="input-group-text">Lama Travelling</label>
                 <input type="text" class="form-control" name="cariBaterai" >
             </div>
         </div>
-        <div class="col-md-1">
-            <input type="text" class="form-control" name="bobotBaterai">
+        <div class="col-lg-1 col-md-3 col-sm-3 mb-3">
+            <input type="text" class="form-control" placeholder="Bobot" name="bobotBaterai">
         </div>
     </div>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-lg-5 col-md-9 col-sm-9">
             <div class="input-group mb-3">
                 <label class="input-group-text">Budget Pembelian</label>
                 <input type="text" class="form-control" name="cariHarga" >
             </div>
         </div>
-        <div class="col-md-1">
-            <input type="text" class="form-control" name="bobotHarga">
+        <div class="col-lg-1 col-md-3 col-sm-3 mb-3">
+            <input type="text" class="form-control" placeholder="Bobot"name="bobotHarga">
         </div>
-        <div class="col-md-5">
+        <div class="col-lg-5 col-md-9 col-sm-9">
             <div class="input-group mb-3">
                 <label class="input-group-text">Hobi Fotografi</label>
                 <select class="form-select" aria-label="Default select example" name="cariKamera">
@@ -46,12 +46,12 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-1">
-            <input type="text" class="form-control" name="bobotKamera">
+        <div class="col-lg-1 col-md-3 col-sm-3 mb-3">
+            <input type="text" class="form-control text-align-center" name="bobotKamera" placeholder="Bobot">
         </div>
     </div>
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-lg-5 col-md-9 col-sm-9">
             <div class="input-group mb-3">
                 <label class="input-group-text mt-0">Aplikasi Digunakan</label>
                 <select class="form-control selectpicker" multiple name="cariAplikasi[]">
@@ -61,15 +61,15 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-1">
-            <input type="text" class="form-control" name="bobotAplikasi">
+        <div class="col-lg-1 col-md-3 col-sm-3 mb-3">
+            <input type="text" class="form-control" name="bobotAplikasi" placeholder="Bobot">
         </div>
     </div>
     <input type="submit" name="rekomendasi" value="Rekomendasi" class="btn btn-primary">
     <input type="submit" name="reset" value="Reset" class="btn btn-danger">
     @if($data['jumlahCari'] == 0 && $data['resp'] == 0)
     <div class="row">
-        <div class="col-lg-6 mb-4 mt-4">
+        <div class="col-lg-5 col-md-9 mb-4 mt-4">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Hasil Pencarian</h6>

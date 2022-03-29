@@ -6,7 +6,7 @@ class RekomendasiController extends Controller
 {
     public function rekomendasi(Request $request)
     {
-        if($request->has('rekomendasi'))
+        if(isset($_GET['rekomendasi']))
         {
             $resp=1;
             //INPUTAN USER
@@ -43,6 +43,21 @@ class RekomendasiController extends Controller
                 $resultRanking = $this->getHasil($resultNormalisasi, $resultKriteria, $bobotUser);
                 $resultSAW = $this->getRanking($resultRanking);
             }
+        }
+        else if(isset($_GET['reset']))
+        {
+            header('Location: /rekomendasi');
+            $kriteriaKenyamanan = [];
+            $resultHandphone = [];
+            $resultSpesifikasi = [];
+            $resultBobot = [];
+            $resultKriteria = [];
+            $resultNormalisasi = [];
+            $resultRanking = [];
+            $resultSAW = [];
+            $jumlahCari = 0;
+            $resp = 0;
+            $spesifikasiAplikasi = [];
         }
         else
         {
@@ -90,11 +105,11 @@ class RekomendasiController extends Controller
         {
             if ($kriteria == 'besar') 
             {
-                $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiUkuranLayar ?ul FILTER( ?ul > 8 )}');
+                $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiUkuranLayar ?ul FILTER( ?ul >= 8 )}');
             } 
             else if ($kriteria == 'sedang') 
             {
-                $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiUkuranLayar ?ul FILTER( ?ul > 6.5 && ?ul < 8 )}');
+                $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiUkuranLayar ?ul FILTER( ?ul >= 6.5 && ?ul < 8 )}');
             } 
             else 
             {
@@ -313,22 +328,13 @@ class RekomendasiController extends Controller
     public function getBobotUser($kamera, $harga, $ul, $baterai, $aplikasi)
     {
         $bobotUser = [];
-        if ($kamera) {
+        if ($baterai) {
             array_push($bobotUser, [
-                'Kamera_Belakang' => $kamera
+                'Baterai' => $baterai
             ]);
         } else {
             array_push($bobotUser, [
-                'Kamera_Belakang' => 1
-            ]);
-        }
-        if ($harga) {
-            array_push($bobotUser, [
-                'Harga' => $harga
-            ]);
-        } else {
-            array_push($bobotUser, [
-                'Harga' => 1
+                'Baterai' => 1
             ]);
         }
         if ($aplikasi) {
@@ -338,33 +344,6 @@ class RekomendasiController extends Controller
         } else {
             array_push($bobotUser, [
                 'Memori' => 1
-            ]);
-        }
-        if ($kamera) {
-            array_push($bobotUser, [
-                'Kamera_Depan' => $kamera
-            ]);
-        } else {
-            array_push($bobotUser, [
-                'Kamera_Depan' => 1
-            ]);
-        }
-        if ($ul) {
-            array_push($bobotUser, [
-                'Ukuran_Layar' => $ul
-            ]);
-        } else {
-            array_push($bobotUser, [
-                'Ukuran_Layar' => 1
-            ]);
-        }
-        if ($baterai) {
-            array_push($bobotUser, [
-                'Baterai' => $baterai
-            ]);
-        } else {
-            array_push($bobotUser, [
-                'Baterai' => 1
             ]);
         }
         if ($aplikasi) {
@@ -385,6 +364,33 @@ class RekomendasiController extends Controller
                 'RAM' => 1
             ]);
         }
+        if ($harga) {
+            array_push($bobotUser, [
+                'Harga' => $harga
+            ]);
+        } else {
+            array_push($bobotUser, [
+                'Harga' => 1
+            ]);
+        }
+        if ($kamera) {
+            array_push($bobotUser, [
+                'Kamera_Belakang' => $kamera
+            ]);
+        } else {
+            array_push($bobotUser, [
+                'Kamera_Belakang' => 1
+            ]);
+        }
+        if ($kamera) {
+            array_push($bobotUser, [
+                'Kamera_Depan' => $kamera
+            ]);
+        } else {
+            array_push($bobotUser, [
+                'Kamera_Depan' => 1
+            ]);
+        }
         if ($aplikasi) {
             array_push($bobotUser, [
                 'Sistem_Operasi' => $aplikasi
@@ -394,6 +400,15 @@ class RekomendasiController extends Controller
                 'Sistem_Operasi' => 1
             ]);
         }
+        if ($ul) {
+            array_push($bobotUser, [
+                'Ukuran_Layar' => $ul
+            ]);
+        } else {
+            array_push($bobotUser, [
+                'Ukuran_Layar' => 1
+            ]);
+        }
 
         return $bobotUser;
     }
@@ -401,7 +416,7 @@ class RekomendasiController extends Controller
     public function showAplikasi()
     {
         $resultquery=[];
-        $resultsql = $this->sparql->query('SELECT * WHERE {?app a handphone:Aplikasi}');
+        $resultsql = $this->sparql->query('SELECT * WHERE {?app a handphone:Aplikasi} ORDER BY ?app');
         foreach($resultsql as $item){
             array_push($resultquery,[
                 'aplikasi' => $this->parseData($item->app->getUri())
@@ -680,7 +695,6 @@ class RekomendasiController extends Controller
                 'nama' => $bobot[$x]['nama']
             ]);
         }
-
         $nilai = [];
         foreach ($queryNilai as $item) {
             array_push($nilai, [
@@ -696,7 +710,6 @@ class RekomendasiController extends Controller
                 'nama' => $item['nama']
             ]);
         }
-
         return $nilai;
     }
 
@@ -716,7 +729,7 @@ class RekomendasiController extends Controller
         //menentukan maksimum dan minimum masing-masing nilai
         for ($i = 0; $i < count($kriteria); $i++)
         {
-            if($kriteria[$i]=='harga'){
+            if($kriteria[$i]['kriteria']=='Harga'){
                 $maxMin[$kriteria[$i]['kriteria']] = min($bobot[$kriteria[$i]['kriteria']]);
             }
             else
@@ -730,7 +743,13 @@ class RekomendasiController extends Controller
         {
             for($j = 0 ; $j < $jumlahData ; $j++)
             {
-                $normal[$j][$kriteria[$i]['kriteria']] = round($bobot[$kriteria[$i]['kriteria']][$j] / $maxMin[$kriteria[$i]['kriteria']],3);
+                if ($kriteria[$i]['kriteria'] == 'Harga') 
+                {
+                    $normal[$j][$kriteria[$i]['kriteria']] = round($maxMin[$kriteria[$i]['kriteria']]/$bobot[$kriteria[$i]['kriteria']][$j],3);
+                }
+                else{
+                    $normal[$j][$kriteria[$i]['kriteria']] = round($bobot[$kriteria[$i]['kriteria']][$j] / $maxMin[$kriteria[$i]['kriteria']],3);
+                }
             }
         }
         for ($i = 0; $i < $jumlahData ; $i++){
@@ -741,7 +760,6 @@ class RekomendasiController extends Controller
 
     public function getHasil($data, $kriteria, $bobotUser)
     {
-
         for($i=0;$i<count($kriteria);$i++)
         {
             for($j=0;$j<count($data);$j++)
@@ -749,7 +767,6 @@ class RekomendasiController extends Controller
                 $hasilKali[$j][$kriteria[$i]['kriteria']] = $data[$j][$kriteria[$i]['kriteria']] * $bobotUser[$i][$kriteria[$i]['kriteria']];
             }
         }
-
         $tempTotal = 0 ;
         for($i=0 ; $i<count($data) ; $i++)
         {

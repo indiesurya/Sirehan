@@ -20,7 +20,7 @@
 </div>
 <div class="row">
 @foreach($handphone['handphone'] as $hp)
-    <div class="col-md-3 col-sm-6 mb-2 justify-content-center">
+    <div class="col-lg-3 col-md-6 col-sm-6 mb-2 justify-content-center">
         <div class="card">
             <img src="img/handphone/{{ $hp['gambar'] }}" class="card-img-top" alt="..." style="width:200px; height:200px;">
             <div class="card-body">

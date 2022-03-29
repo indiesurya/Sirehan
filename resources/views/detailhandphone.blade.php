@@ -9,7 +9,7 @@
 <div class="card mb-3">
     <div class="row g-0">
         <div class="col-md-4">
-        <img src="{{ asset('img/hp1.png')}}" class="img-fluid rounded-start mt-3" alt="...">
+        <img src="{{ asset('img/handphone/'.$dtl['gambar'])}}" class="img-fluid rounded-start mt-3" alt="...">
         </div>
         <div class="col-md-8">
         <div class="card-body">

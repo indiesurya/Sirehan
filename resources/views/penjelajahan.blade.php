@@ -17,6 +17,7 @@
     <input type="submit" name="browsing" value="Jelajah" class="btn btn-primary">
     <input type="submit" name="reset" value="Reset" class="btn btn-danger">
 </form>
+{{-- @dd($data['resp'], $data['jumlahbrowse']) --}}
 <div class="row">
         <div class="col-lg-6 mb-4 mt-4">
             <div class="card shadow mb-4">

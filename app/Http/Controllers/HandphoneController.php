@@ -15,6 +15,7 @@ class HandphoneController extends Controller {
             ?Handphone handphone:memilikiSistemOperasi ?SistemOperasi.
             ?Handphone handphone:memilikiUkuranLayar ?UkuranLayar.
             ?Handphone handphone:nilaiHarga ?Harga.
+            ?Handphone handphone:memilikiGambar ?Gambar
         }');
 
         $result=[];
@@ -30,9 +31,11 @@ class HandphoneController extends Controller {
                 'sistemoperasi' => str_replace('_',' ',$this->parseData($dtl->SistemOperasi->getUri())),
                 'ukuranlayar' => $this->parseData($dtl->UkuranLayar->getUri()),
                 'harga' => $this->parseData($dtl->Harga->getValue()),
+                'gambar' => $this->parseData($dtl->Gambar->getValue())
                 // 'pros' => $this->parseData($dtl->pros->getValue())
             ]);
         }
+        
         return view('detailhandphone', [
             "title" => 'Detail Handphone',
             "page" => "detail_handphone",

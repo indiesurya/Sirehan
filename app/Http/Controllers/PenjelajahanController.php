@@ -17,7 +17,7 @@ class PenjelajahanController extends Controller
         }
         $resultmerek = [];
         $resp = 0;
-        if ($request->has('browsing')) {
+        if (isset($_GET['browsing'])) {
             $resp++;
             if ($request->browse != '') {
                 $querydata = $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiMerek handphone:' . $request->browse . '}');
@@ -30,10 +30,14 @@ class PenjelajahanController extends Controller
             }
             else{
                 $resultmerek = [];
+                $jumlahbrowse = 0;
             }
+        } else if (isset($_GET['reset'])) {
+            header('Location: /penjelajahan');
+            $resultmerek = [];
+            $resp = 0;
         }
         $jumlahbrowse = count($resultmerek);
-
         $data = [
             'merek' => $result,
             'result' => $resultmerek,
