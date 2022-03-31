@@ -24,7 +24,7 @@ class Controller extends BaseController
         RdfNamespace::set('owl', 'http://www.w3.org/2002/07/owl#');
         RdfNamespace::set('handphone', 'http://www.semanticweb.org/indiesurya/OntologiHandphone#');
 
-        $this->sparql = new Client('http://127.0.0.1:3030/handphone/query');
+        $this->sparql = new Client('http://ec2-54-179-242-173.ap-southeast-1.compute.amazonaws.com:3030/handphone/query');
     }
     
     public function parseData($str)
