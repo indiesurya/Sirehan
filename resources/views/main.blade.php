@@ -14,9 +14,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>SIREHAN</title>
+    <title>{{ $title }}</title>
 
     <style>
+        html, body{
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Merriweather', serif;
         }
@@ -102,7 +105,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" id="home">
         <div class="container">
             <a class="navbar-brand" href="/dashboard">SIREHAN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,7 +113,7 @@
                 </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav" id="nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
                 <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#features">Features</a>
                 <a class="nav-link" href="#gallery">Gallery</a>
@@ -128,22 +131,22 @@
         <div class="carousel-item active">
         <img src="img/carousel1.jpg" class="d-block w-100"alt="...">
         <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>  
-            <p>Some representative placeholder content for the first slide.</p>
+            <h5>SIREHAN</h5>  
+            <p>Sistem Rekomendasi Pemilihan Handphone</p>
         </div>
         </div>
         <div class="carousel-item">
         <img src="img/carousel6.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+            <h5>Fitur Unggulan</h5>
+            <p>Pengguna dapat menggunakan fitur Pencarian, Penjelajahan dan Rekomendasi</p>
         </div>
         </div>
         <div class="carousel-item">
         <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            <h5>Easy and Ease to Use</h5>
+            <p>Sistem ini sangat mudah dan berguna dalam membantu menemukan handphone pilihan anda</p>
         </div>
         </div>
     </div>
@@ -160,9 +163,8 @@
         <div class="row">
             <div class="col-sm-12 col-lg-7" id="about">
                 <h1 class="fw-bold fst-italic mt-5 mb-3">SIREHAN</b></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aliquam nobis fuga, ratione ipsa possimus fugiat quae accusantium tempora atque ullam dicta odio beatae esse, nemo distinctio dolores quo totam mollitia commodi nulla, sapiente cum. Porro nisi quia ullam sint officia, quis iure cum laboriosam deleniti at iusto, officiis eos!</p>
+                <p>Sirehan merupakan sistem rekomendasi pemilihan handphone yang membantu masyarakat dalam memilih handphone berdasarkan kriteria yang mudah dipahami oleh masyarakat secara umum. Fitur utama yaitu fitur rekomendasi yang mana masyarakat mampu menggunakan kriteria ukuran kenyamanan memegang handphone, budget pembelian, aplikasi yang digunakan sehari-hari, lama travelling dan hobi fotografi.</p>
                 <a class="btn btn-primary" href="/dashboard" role="button">Kunjungi</a>
-                <button type="button" class="btn btn-outline-primary">Daftar atau Masuk</button>
             </div>
             <div class="col-lg-5">
                 <img src="/img/hp3.jpg" class="img mx-auto d-block" alt="">
@@ -180,7 +182,7 @@
                                 <img src="img/hp1.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><b>Pencarian</b></h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Fitur ini berfungsi untuk melakukan pencarian terhadap handphone berdasarkan spesifikasi handphone</p>
                                     <a href="/pencarian" class="btn btn-primary">Kunjungi</a>
                                 </div>
                             </div>
@@ -190,7 +192,7 @@
                                 <img src="img/hp1.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><b>Rekomendasi</b></h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Fitur ini berfungsi untuk melakukan rekomendasi handphone kepada masyarakat berdasarkan kebutuhan pengguna</p>
                                     <a href="/rekomendasi" class="btn btn-primary">Kunjungi</a>
                                 </div>
                             </div>
@@ -200,7 +202,7 @@
                                 <img src="img/hp1.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><b>Penjelajahan</b></h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Fitur ini berfungsi untuk melakukan penjelajahan terhadap handphone berdasarkan merek handphone</p>
                                     <a href="/penjelajahan" class="btn btn-primary">Kunjungi</a>
                                 </div>
                             </div>  
@@ -215,35 +217,36 @@
             <div class="gallery">
                 <h1 class="mb-5 text-center" id="gallery">Gallery</h1>
                 <div class="row">
-                    <?php for ($i=0; $i <8; $i++) : ?>
+                    @foreach($handphone as $item)
                     <div class="col-md-6 col-sm-6 col-lg-3">
                         <div class="card mb-3">
-                        <img src="img/carousel1.jpg" class="card-img-top"style="height:200px;" alt="...">
+                        <img src="img/handphone/{{ $item['gambar'] }}" class="card-img-top"style="width:200px; height:200px;" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">POCO X3 NFC</h5>
-                            <p class="card-text fw-lighter fs-6">Xiaomi</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 class="card-title fw-bold">{{ str_replace('_',' ',$item['nama_handphone'])  }}</h5>
+                            <p class="card-text fw-lighter fs-6">{{ $item['harga'] }}</p>
+                            <a href="/detail_handphone/{{$item['nama_handphone']}}" class="btn btn-primary">Detail</a>
                         </div>
                         </div>
                     </div>
-                    <?php endfor; ?>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
     <div class="container-fluid shadow-lg pb-1">
         <footer class="d-flex flex-wrap align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 col-sm-12 mb-0 text-muted">&copy; 2021 Company, Inc</p>
+            <p class="col-md-4 col-sm-12 mb-0 text-muted">&copy; 2022 Sirehan</p>
 
             <ul class="nav col-md-4 col-sm-12 offset-md-4">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            <li class="nav-item"><a href="#home" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+            <li class="nav-item"><a href="#features" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#gallery" class="nav-link px-2 text-muted">Gallery</a></li>
+            
             </ul>
         </footer>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

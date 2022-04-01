@@ -134,6 +134,19 @@
                 </div>
             </div>
         </div>
+        
+        @if($list['resp']==1 && $list['jumlahHandphone']>=1)
+        <div class="col-lg-6 mb-4 mt-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Proses SPARQL</h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="small">{{ $list['sql'] }}</h4>
+                </div>
+            </div>
+        </div>
+        @endif
     </div>
 </div>
 @endsection

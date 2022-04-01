@@ -105,11 +105,11 @@ class PencarianController extends Controller
             }
             if ($request->cariKameraDepan!= '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memilikiKameraDepan handphone:' . $request->cari_kameradepan;
+                    $sql = $sql . '?hp handphone:memilikiKameraDepan handphone:' . $request->cariKameraDepan;
                     $i++;
                 } 
                 else {
-                    $sql = $sql . '. ?hp handphone:memilikiKameraDepan handphone:' . $request->cari_kameradepan;
+                    $sql = $sql . '. ?hp handphone:memilikiKameraDepan handphone:' . $request->cariKameraDepan;
                 }   
             } 
             else {
@@ -139,13 +139,13 @@ class PencarianController extends Controller
             else {
                 $sql = $sql;
             }
-            if ($request->cariMemori!= '') {
+            if ($request->cariSistemOperasi!= '') {
                 if ($i == 0) {
-                    $sql = $sql . '?hp handphone:memilikiSistemOperasi handphone:' . $request->cariMemori;
+                    $sql = $sql . '?hp handphone:memilikiSistemOperasi handphone:' . $request->cariSistemOperasi;
                     $i++;
                 } 
                 else {
-                    $sql = $sql . '. ?hp handphone:memilikiSistemOperasi handphone:' . $request->cariMemori;
+                    $sql = $sql . '. ?hp handphone:memilikiSistemOperasi handphone:' . $request->cariSistemOperasi;
                 }  
             } 
             else {
@@ -203,11 +203,13 @@ class PencarianController extends Controller
             $resultHandphone = [];
             $jumlahHandphone = 0;
             $resp = 0;
+            $sql=[];
         }
         else{
             $resultHandphone = [];
             $jumlahHandphone = 0;
             $resp = 0;
+            $sql=[];
         }
         
         $data = [
@@ -221,7 +223,8 @@ class PencarianController extends Controller
             'listUkuranLayar' => $resultUkuranLayar,
             'searching1' => $resultHandphone,
             'jumlahHandphone' => $jumlahHandphone,
-            'resp' => $resp
+            'resp' => $resp,
+            'sql' => $sql
         ];
             
         return view('pencarian', [

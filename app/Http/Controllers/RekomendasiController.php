@@ -10,21 +10,11 @@ class RekomendasiController extends Controller
         {
             $resp=1;
             //INPUTAN USER
-            $kriteriaKenyamanan = $this->getKenyamanan($request->cariUkuranLayar);
-            $kriteriaBudget = $this->getBudget($request->cariHarga);
-            $kriteriaAplikasi = $this->getAplikasi($request->cariAplikasi);
-            $kriteriaFotografi1 = $this->getFotografi1($request->cariKamera);
-            $kriteriaFotografi2 = $this->getFotografi2($request->cariKamera);
-            $kriteriaTravelling = $this->getTravelling($request->cariBaterai);
+            $handphone = $this->getHandphone($request->cariUkuranLayar, $request->cariBaterai, $request->cariKamera, $request->cariHarga, $request->cariAplikasi);
             $bobotUser = $this->getBobotUser($request->bobotKamera, $request->bobotHarga, $request->bobotUl, $request->bobotBaterai, $request->bobotAplikasi);
             //END INPUTAN USER
-            
-            //PROSES PENCARIAN HANDPHONE
-            $spesifikasiAplikasi = $this->spesifikasiAplikasi($kriteriaAplikasi);
-            $resultHandphone =$this->namaHandphone($spesifikasiAplikasi, $kriteriaKenyamanan, $kriteriaBudget, $kriteriaFotografi1, $kriteriaFotografi2, $kriteriaTravelling);
-            $jumlahCari = count($resultHandphone);
-            //END PROSES PENCARIAN HANDPHONE
-
+            $sql = $handphone[1];
+            $jumlahCari = count($handphone);
             if($jumlahCari == 0)
             {
                 $resultSpesifikasi = [];
@@ -36,7 +26,7 @@ class RekomendasiController extends Controller
             }
             else 
             {
-                $resultSpesifikasi = $this->getSpesifikasi($resultHandphone);
+                $resultSpesifikasi = $this->getSpesifikasi($handphone[0]);
                 $resultBobot = $this->getBobot($resultSpesifikasi);
                 $resultKriteria = $this->getKriteria();
                 $resultNormalisasi = $this->getNormalisasi($resultBobot, $resultKriteria);
@@ -47,22 +37,18 @@ class RekomendasiController extends Controller
         else if(isset($_GET['reset']))
         {
             header('Location: /rekomendasi');
-            $kriteriaKenyamanan = [];
-            $resultHandphone = [];
-            $resultSpesifikasi = [];
             $resultBobot = [];
+            $resultSpesifikasi=[];
             $resultKriteria = [];
             $resultNormalisasi = [];
             $resultRanking = [];
             $resultSAW = [];
             $jumlahCari = 0;
             $resp = 0;
-            $spesifikasiAplikasi = [];
+            $sql = [];
         }
         else
         {
-            $kriteriaKenyamanan = [];
-            $resultHandphone = [];
             $resultSpesifikasi = [];
             $resultBobot = [];
             $resultKriteria = [];
@@ -71,25 +57,22 @@ class RekomendasiController extends Controller
             $resultSAW = [];
             $jumlahCari = 0;
             $resp = 0;
-            $spesifikasiAplikasi = [];
+            $sql = [];
         }
 
         $rowAplikasi = $this->showAplikasi();
 
         $data = [
             'resp' => $resp,
-            'kriteriaKenyamanan' =>$kriteriaKenyamanan,
             'jumlahCari' => $jumlahCari,
-            'resulthandphone' => $resultHandphone,
-            'resultspesifikasi' => $resultSpesifikasi,
-            // 'tampildata' => $resultdata,
-            'resultbobot' => $resultBobot,
-            'resultkriteria' => $resultKriteria,
-            'resultnormalisasi' => $resultNormalisasi,
-            'resultranking' => $resultRanking,
+            'resultSpesifikasi' => $resultSpesifikasi,
+            'resultBobot' => $resultBobot,
+            'resultKriteria' => $resultKriteria,
+            'resultNormalisasi' => $resultNormalisasi,
+            'resultRanking' => $resultRanking,
             'resultSAW' => $resultSAW,
             'rowAplikasi' => $rowAplikasi,
-            'spesifikasiAplikasi' => $spesifikasiAplikasi
+            'sql' => $sql
         ];
 
         return view('rekomendasi', [
@@ -99,84 +82,81 @@ class RekomendasiController extends Controller
         ]);
     }
 
-    public function getKenyamanan($kriteria)
+    public function getHandphone($ukuranKenyamanan,$lamaTravelling,$hobiFotografi,$budgetPembelian,$aplikasiSehari)
     {
-        if ($kriteria != '') 
+        $sql = 'SELECT * WHERE {?hp a handphone:Handphone';
+        $i = 0;
+        //Query untuk mencari ukuran kenyamanan
+        if($ukuranKenyamanan == '')
         {
-            if ($kriteria == 'besar') 
-            {
-                $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiUkuranLayar ?ul FILTER( ?ul >= 8 )}');
-            } 
-            else if ($kriteria == 'sedang') 
-            {
-                $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiUkuranLayar ?ul FILTER( ?ul >= 6.5 && ?ul < 8 )}');
-            } 
-            else 
-            {
-                $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiUkuranLayar ?ul FILTER( ?ul < 6.5 )}');
-            }
+            $sql = $sql;
+        }
+        else if ($ukuranKenyamanan == 'besar') 
+        {
+            $sql = $sql . '.?hp handphone:memilikiUkuranLayar ?ul .?ul handphone:nilaiUkuranLayar ?nilaiUl FILTER( ?nilaiUl >= 8 )';
+        } 
+        else if ($ukuranKenyamanan == 'sedang') 
+        {
+            $sql = $sql . '.?hp handphone:memilikiUkuranLayar ?ul .?ul handphone:nilaiUkuranLayar ?nilaiUl FILTER( ?nilaiUl >= 6.5 && ?nilaiUl < 8 )';
+        }
+        else 
+        {
+            $sql = $sql . '.?hp handphone:memilikiUkuranLayar ?ul .?ul handphone:nilaiUkuranLayar ?nilaiUl FILTER( ?nilaiUl < 6.5 )';
+        }
+
+        //Query untuk mencari lama travelling
+        if ($lamaTravelling != '')
+        {
+            $sql = $sql . '.?hp handphone:nilaiDayaTahan ?dayaTahan FILTER (?dayaTahan > ' . $lamaTravelling . ')';
+        }
+        else
+        {
+            $sql = $sql;
+        }
+
+        //Query untuk mencari hobi fotografi
+        if ($hobiFotografi == '') 
+        {
+            $sql = $sql;
+        } 
+        else if ($hobiFotografi == '0') 
+        {
+            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb .?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb > 15)';
+        } 
+        else if ($hobiFotografi == '1') 
+        {
+            $sql = $sql . '.?hp handphone:memilikiKameraDepan ?kd .?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd > 10)';
+        } 
+        else if ($hobiFotografi == '2') 
+        {
+            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb.?hp handphone:memilikiKameraDepan ?kd .?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb > 15).?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd > 10)';
+        } 
+        else if ($hobiFotografi == '1') {
+            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb.?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb <= 15)';
         } 
         else 
         {
-            $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiUkuranLayar ?ul FILTER( ?ul > 0 )}');
-        }
-        $result1 = [];
-
-        foreach ($query as $item) {
-            array_push($result1, [
-                'nama' => $this->parseData($item->hp->getUri()),
-                'ul' => $this->parseData($item->ul->getValue())
-            ]);
+            $sql = $sql . '.?hp handphone:memilikiKameraDepan ?kd. ?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd <= 10)';
         }
 
-        $result2 = [];
-        foreach ($result1 as $item) {
-            array_push($result2, [
-                'data' => $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiUkuranLayar handphone:' . $item['nama'] . '}')
-            ]);
-        }
-
-        $rowResult = [];
-        foreach ($result2 as $item) {
-            $total = count($item['data']);
-            for ($i = 0; $i < $total; $i++) {
-                array_push($rowResult, [
-                    'nama' => $this->parseData($item['data'][$i]->hp->getUri())
-                ]);
-            }
-        }
-
-        return $rowResult;
-    }
-
-    public function getBudget($kriteria)
-    {
-        if ($kriteria != '') 
+        //Query untuk mencari budget pembelian
+        if($budgetPembelian == '')
         {
-            $harga = $kriteria;
-        } 
+            $sql = $sql;
+        }
         else 
         {
-            $harga = 9999999999;
+            $sql = $sql . '.?hp handphone:nilaiHarga ?harga FILTER(?harga < '.$budgetPembelian.')';
         }
-
-        $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiHarga ?harga FILTER(?harga < '.$harga.')}');
-
-        $rowResult = [];
-        foreach($query as $item)
+        
+        //Query untuk aplikasi sehari hari
+        if ($aplikasiSehari == '') 
         {
-            array_push($rowResult,[
-                'nama' => $this->parseData($item->hp->getUri())
-            ]);
+            $sql = $sql;
         }
-
-        return $rowResult;
-    }
-
-    public function getAplikasi($kriteria)
-    {
-        if ($kriteria != '') {
-            $aplikasi = $kriteria;
+        else
+        {
+            $aplikasi = $aplikasiSehari;
             $rowapp = [];
             foreach ($aplikasi as $item) {
                 array_push($rowapp, [
@@ -203,126 +183,26 @@ class RekomendasiController extends Controller
                 $sumMemori = $sumMemori + $minreq[$i]['minMemori'];
             }
 
-            $minrequirement = max($minreq);
-            array_push($minrequirement, [
+            $minRequirement = max($minreq);
+            array_push($minRequirement, [
                 'sumMemori' => $sumMemori
             ]);
-        } 
-        else {
-            $minreq = [];
-            $minrequirement = [
-                'minRAM' => 0,
-                'minMemori' => 0,
-                'minOS' => 0,
-                'minProsesor' => 0
-            ];
 
-            array_push($minrequirement, [
-                'sumMemori' => 0
-            ]);
+            $sql = $sql . '.?hp handphone:memilikiRAM ?ram .?ram handphone:nilaiRAM ?nilaiRAM FILTER(?nilaiRAM >= '.$minRequirement['minRAM']. ').?hp handphone:memilikiMemori ?memori .?memori handphone:nilaiMemori ?nilaiMemori FILTER(?nilaiMemori >= ' . $minRequirement[0]['sumMemori'] . ').?hp handphone:memilikiProsesor ?prosesor .?prosesor handphone:nilaiProsesor ?nilaiProsesor FILTER(?nilaiProsesor >= ' . $minRequirement['minProsesor'] . ').?hp handphone:memilikiSistemOperasi ?so .?so handphone:nilaiSistemOperasi ?nilaiSO FILTER(?nilaiSO >= ' . $minRequirement['minOS'] . ')';
         }
+        $sql = $sql .'}';
 
-        return $minrequirement;
-    }
-
-    public function getFotografi1($kriteria)
-    {
-        if ($kriteria == '') 
-        {
-            $querykb = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiKameraBelakang ?kb FILTER(?kb > 0)}');
-        } 
-        else if ($kriteria == '1') 
-        {
-            $querykb = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiKameraBelakang ?kb FILTER(?kb > 15)}');
-        } 
-        else 
-        {
-            $querykb = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiKameraBelakang ?kb FILTER(?kb < 15)}');
-        }
-        $kb = [];
-        foreach ($querykb as $item) {
-            array_push($kb, [
-                'kb' => $this->parseData($item->hp->getUri())
-            ]);
-        }
-
-        $resultquerykb = [];
-        foreach ($kb as $item) {
-            array_push($resultquerykb, [
-                'nama' => $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiKameraBelakang handphone:' . $item['kb'] . '}')
-            ]);
-        }
-
-        $resultkb = [];
-
-        for ($i = 0; $i < count($resultquerykb); $i++) 
-        {
-            for ($j = 0; $j < count($resultquerykb[$i]['nama']); $j++) 
-            {
-                array_push($resultkb, [
-                    'nama' => $this->parseData($resultquerykb[$i]['nama'][$j]->hp->getUri())
-                ]);
-            }
-        }
-        
-        return $resultkb;
-    }
-
-    public function getFotografi2($kriteria)
-    {
-        if ($kriteria == '') {
-            $querykd = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiKameraDepan ?kd FILTER(?kd > 0)}');
-        } else if ($kriteria == '1') {
-            $querykd = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiKameraDepan ?kd FILTER(?kd > 10)}');
-        } else {
-            $querykd = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiKameraDepan ?kd FILTER(?kd < 10)}');
-        }
-        $kd = [];
-
-        foreach ($querykd as $item) {
-            array_push($kd, [
-                'kd' => $this->parseData($item->hp->getUri())
-            ]);
-        }
-
-        $resultquerykd = [];
-        foreach ($kd as $item) {
-            array_push($resultquerykd, [
-                'nama' => $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiKameraDepan handphone:' . $item['kd'] . '}')
-            ]);
-        }
-
-        $resultkd = [];
-
-        for ($i = 0; $i < count($resultquerykd); $i++) {
-            for ($j = 0; $j < count($resultquerykd[$i]['nama']); $j++) {
-                array_push($resultkd, [
-                    'nama' => $this->parseData($resultquerykd[$i]['nama'][$j]->hp->getUri())
-                ]);
-            }
-        }
-
-        return $resultkd;
-    }
-
-    public function getTravelling($kriteria)
-    {
-        if ($kriteria != '') {
-            $lamaAktivitas = $kriteria;
-
-            $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiDayaTahan ?dayaTahan FILTER (?dayaTahan > ' . $lamaAktivitas . ')}');
-        } else {
-            $query = $this->sparql->query('SELECT * WHERE {?hp handphone:nilaiDayaTahan ?dayaTahan FILTER (?dayaTahan > 0)}');
-        }
-
-        $resultBaterai = [];
+        //EksekusiQuery
+        $rowQuery=[];
+        $query = $this->sparql->query($sql);
         foreach ($query as $item) {
-            array_push($resultBaterai, [
-                'nama' => $this->parseData($item->hp->getUri())
+            array_push($rowQuery,[
+                'namaHandphone' => $this->parseData($item->hp->getUri())
             ]);
         }
 
-        return $resultBaterai;
+        return [$rowQuery,$sql];
+
     }
 
     public function getBobotUser($kamera, $harga, $ul, $baterai, $aplikasi)
@@ -425,201 +305,6 @@ class RekomendasiController extends Controller
 
         return $resultquery;
     }
-
-    public function spesifikasiAplikasi ($minRequirement)
-    {
-        $ram = $this->sparql->query('SELECT * WHERE {?ram handphone:nilaiRAM ?nilairam FILTER(?nilairam >= '.$minRequirement['minRAM'].')}');
-        $prosesor = $this->sparql->query('SELECT * WHERE {?Prosesor handphone:nilaiProsesor ?nilaiProsesor FILTER(?nilaiProsesor >= ' . $minRequirement['minProsesor'] . ')}');
-        $memori = $this->sparql->query('SELECT * WHERE {?Memori handphone:nilaiMemori ?nilaiMemori FILTER(?nilaiMemori >= ' . $minRequirement[0]['sumMemori'] . ')}');
-        $os = $this->sparql->query('SELECT * WHERE {?OS handphone:nilaiSistemOperasi ?nilaiOS FILTER(?nilaiOS >= ' . $minRequirement['minOS'] . ')}');
-        
-        $uriRAM = [];
-        foreach($ram as $item){
-            array_push($uriRAM, [
-                'RAM' => $this->parseData($item->ram->getUri())
-            ]);
-        }
-        $uriProsesor = [];
-        foreach ($prosesor as $item) {
-            array_push($uriProsesor, [
-                'Prosesor' => $this->parseData($item->Prosesor->getUri())
-            ]);
-        }
-        $uriMemori = [];
-        foreach ($memori as $item) {
-            array_push($uriMemori, [
-                'Memori' => $this->parseData($item->Memori->getUri())
-            ]);
-        }
-        $uriOS = [];
-        foreach ($os as $item) {
-            array_push($uriOS, [
-                'OS' => $this->parseData($item->OS->getUri())
-            ]);
-        }
-        
-        $minreq = [
-            'minRAM' => $uriRAM,
-            'minProsesor' => $uriProsesor,
-            'minMemori' => $uriMemori,
-            'minOS' => $uriOS
-        ];
-        
-        //Handphone berdasarkan RAM
-        $tempRAM = [];
-        $x=0;
-        foreach ($minreq['minRAM'] as $item) {
-            array_push($tempRAM, [
-                'ram' => $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiRAM handphone:'.$item['RAM'].'}'),
-                'nram' => $item['RAM']
-            ]);
-        $x++;
-        }
-        $resultRAM=[];
-        for ($i=0; $i <count($tempRAM) ; $i++) { 
-            for ($j=0; $j <count($tempRAM[$i]['ram']) ; $j++) { 
-                array_push($resultRAM,[
-                    'nama'=>$this->parseData($tempRAM[$i]['ram'][$j]->hp->getUri())
-                ]);
-            }
-        }
-        //END
-
-        //Handphone berdasarkan Prosesor
-        $tempProsesor = [];
-        $x = 0;
-        foreach ($minreq['minProsesor'] as $item) {
-            array_push($tempProsesor, [
-                'Prosesor' => $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiProsesor handphone:' . $item['Prosesor'] . '}')
-            ]);
-            $x++;
-        }
-        $resultProsesor = [];
-        for ($i = 0; $i < count($tempProsesor); $i++) {
-            for ($j = 0; $j < count($tempProsesor[$i]['Prosesor']); $j++) {
-                array_push($resultProsesor, [
-                    'nama' => $this->parseData($tempProsesor[$i]['Prosesor'][$j]->hp->getUri())
-                ]);
-            }
-        }
-        //END
-
-        //Handphone Berdasarkan Memori
-        $tempMemori = [];
-        $x = 0;
-        foreach ($minreq['minMemori'] as $item) {
-            array_push($tempMemori, [
-                'Memori' => $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiMemori handphone:' . $item['Memori'] . '}')
-            ]);
-            $x++;
-        }
-        $resultMemori = [];
-        for ($i = 0; $i < count($tempMemori); $i++) {
-            for ($j = 0; $j < count($tempMemori[$i]['Memori']); $j++) {
-                array_push($resultMemori, [
-                    'nama' => $this->parseData($tempMemori[$i]['Memori'][$j]->hp->getUri())
-                ]);
-            }
-        }
-        //END
-
-        //Handphone berdasarkan OS
-        $tempOS = [];
-        $x = 0;
-        foreach ($minreq['minOS'] as $item) {
-            array_push($tempOS, [
-                'OS' => $this->sparql->query('SELECT * WHERE {?hp handphone:memilikiSistemOperasi handphone:' . $item['OS'] . '}')
-            ]);
-            $x++;
-        }
-        $resultOS = [];
-        for ($i = 0; $i < count($tempOS); $i++) {
-            for ($j = 0; $j < count($tempOS[$i]['OS']); $j++) {
-                array_push($resultOS, [
-                    'nama' => $this->parseData($tempOS[$i]['OS'][$j]->hp->getUri())
-                ]);
-            }
-        }
-        //END
-
-        $resultAplikasi = [
-            'RAM' => $resultRAM,
-            'OS' => $resultOS,
-            'Memori' => $resultMemori,
-            'Prosesor' => $resultProsesor 
-        ];
-        
-        return $resultAplikasi;
-    }
-
-    public function namaHandphone($minAplikasi, $minUkuranLayar, $minBudget, $minKameraBelakang, $minKameraDepan, $minBaterai)
-    {
-        $namaAplikasi = [];
-        foreach($minAplikasi['RAM'] as $item){
-            array_push($namaAplikasi,[
-                strval($item['nama'])
-            ]);
-        }
-        foreach ($minAplikasi['Prosesor'] as $item) {
-            array_push($namaAplikasi, [
-                strval($item['nama'])
-            ]);
-        }
-        foreach ($minAplikasi['Memori'] as $item) {
-            array_push($namaAplikasi, [
-                strval($item['nama'])
-            ]);
-        }
-        foreach ($minAplikasi['OS'] as $item) {
-            array_push($namaAplikasi, [
-                strval($item['nama'])
-            ]);
-        }
-        foreach ($minUkuranLayar as $item) {
-            array_push($namaAplikasi, [
-                strval($item['nama'])
-            ]);
-        }
-        foreach ($minKameraBelakang as $item){
-            array_push($namaAplikasi, [
-                strval($item['nama'])
-            ]);
-        }
-        foreach ($minBudget as $item) {
-            array_push($namaAplikasi, [
-                strval($item['nama'])
-            ]);
-        }
-        foreach ($minKameraDepan as $item){
-            array_push($namaAplikasi,[
-                strval($item['nama'])
-            ]);
-        }
-        foreach($minBaterai as $item){
-            array_push($namaAplikasi,[
-                strval($item['nama'])
-            ]);
-        }
-        for($i=0;$i<1;$i++){
-            for ($j = 0; $j < count($namaAplikasi); $j++) {
-                $namaAplikasi[$j] = $this->parseData($namaAplikasi[$j][0]);
-            }
-        }
-
-        $duplicates = array_count_values($namaAplikasi);
-        
-        $resultdata=[];
-        $x=0;
-        foreach($duplicates as $item){
-            if($item == 9){
-                array_push($resultdata,[
-                    'nama' => $namaAplikasi[$x]
-                ]);
-            }
-        $x++;
-        }
-        return $resultdata;
-    }
     
     public function getSpesifikasi($data)
     {
@@ -627,7 +312,7 @@ class RekomendasiController extends Controller
         $jumlahData = count($data);
         for ($x = 0; $x < $jumlahData; $x++) {
             array_push($queryData, [
-                'data' => $this->sparql->query('SELECT * WHERE {VALUES ?hp {handphone:' . $data[$x]['nama'] . '}
+                'data' => $this->sparql->query('SELECT * WHERE {VALUES ?hp {handphone:' . $data[$x]['namaHandphone'] . '}
                 .?hp handphone:memilikiBaterai ?baterai 
                 .?hp handphone:nilaiDayaTahan ?nilaibaterai
                 .?hp handphone:nilaiHarga ?harga

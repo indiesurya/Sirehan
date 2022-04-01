@@ -19,25 +19,38 @@
 </form>
 {{-- @dd($data['resp'], $data['jumlahbrowse']) --}}
 <div class="row">
-        <div class="col-lg-6 mb-4 mt-4">
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Hasil Penjelajahan</h6>
-                </div>
-                <div class="card-body">
-                    @if($data['resp'] == 0)
-                        <h4 class="small font-weight-bold">Belum terdapat pencarian data<span> </h4>
-                    @elseif($data['resp'] == 1 && $data['jumlahbrowse'] == 0)
-                        <h4 class="small font-weight-bold">Data tidak ditemukan<span></h4>
-                    @else
-                        @foreach ($data['result'] as $item)
-                        <ul class="list-group list-group-flush">
-                            <a href="/detail_handphone/{{$item['browse']}}" class="list-group-item list-group-item-action">{{ str_replace('_',' ',$item['browse']) }}</li></a>
-                        </ul>
-                        @endforeach
-                    @endif
-                </div>
+    <div class="col-lg-6 mb-4 mt-4">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Hasil Penjelajahan</h6>
+            </div>
+            <div class="card-body">
+                @if($data['resp'] == 0)
+                    <h4 class="small font-weight-bold">Belum terdapat pencarian data<span> </h4>
+                @elseif($data['resp'] == 1 && $data['jumlahbrowse'] == 0)
+                    <h4 class="small font-weight-bold">Data tidak ditemukan<span></h4>
+                @else
+                    @foreach ($data['result'] as $item)
+                    <ul class="list-group list-group-flush">
+                        <a href="/detail_handphone/{{$item['browse']}}" class="list-group-item list-group-item-action">{{ str_replace('_',' ',$item['browse']) }}</li></a>
+                    </ul>
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>
+    @if($data['resp']>=1 && $data['jumlahbrowse']>=1)
+    <div class="col-lg-6 mb-4 mt-4">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Proses SPARQL</h6>
+            </div>
+            <div class="card-body">
+                <h4 class="small">{{ $data['sql'] }}</h4>
+            </div>
+        </div>
+    </div>
+    @endif
+</div>
+
 @endsection

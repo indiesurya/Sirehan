@@ -41,8 +41,11 @@
                 <label class="input-group-text">Hobi Fotografi</label>
                 <select class="form-select" aria-label="Default select example" name="cariKamera">
                     <option value=''>Pilihlah salah satu</option>
-                    <option value="1">Iya</option>
-                    <option value="0">Tidak</option>
+                    <option value="0">Cinta Fotografi</option>
+                    <option value="1">Selfie</option>
+                    <option value="2">Fotografi & Selfie</option>
+                    <option value="3">Sekedar suka mengabadikan momen</option>
+                    <option value="4">Sekedar suka selfie</option>
                 </select>
             </div>
         </div>
@@ -94,7 +97,19 @@
         </div>
     </div>
     @else
-        <h6 class="mt-4 mb-3">1. Tabel Spesifikasi Handphone</h6>
+    <div class="row">
+        <div class="col-lg-6 mb-4 mt-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Proses SPARQL</h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="small">{{ $data['sql'] }}<span> </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+        <h6 class="mb-3">1. Tabel Spesifikasi Handphone</h6>
         <table class="table table-hover">
             <thead>
                 <tr style="background-color: #4E73DF; color:white; text-center" class="">
@@ -113,7 +128,7 @@
             </thead>
             <tbody>
             <?php $i = 0;?>
-            @foreach($data['resultspesifikasi'] as $item)
+            @foreach($data['resultSpesifikasi'] as $item)
                 <tr class="table-<?php if($i%2==0) {
                     echo "secondary";
                 }else{
@@ -155,7 +170,7 @@
             </thead>
             <tbody>
             <?php $i = 0;?>
-            @foreach($data['resultbobot'] as $item)
+            @foreach($data['resultBobot'] as $item)
                 <tr class="table-<?php if($i%2==0) {
                     echo "secondary";
                 }else{
@@ -197,7 +212,7 @@
             </thead>
             <tbody>
             <?php $i = 0;?>
-            @foreach($data['resultnormalisasi'] as $item)
+            @foreach($data['resultNormalisasi'] as $item)
                 <tr class="table-<?php if($i%2==0) {
                     echo "secondary";
                 }else{
@@ -231,7 +246,7 @@
             </thead>
             <tbody>
             <?php $i = 0;?>
-            @foreach($data['resultranking'] as $item)
+            @foreach($data['resultRanking'] as $item)
                 <tr class="table-<?php if($i%2==0) {
                     echo "secondary";
                 }else{

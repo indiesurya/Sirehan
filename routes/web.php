@@ -18,9 +18,7 @@ use App\Http\Controllers\PenjelajahanController;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', [DashboardController::class,'landingPage']);
 Route::get('/pencarian', [PencarianController::class, 'searching']);
 Route::get('/rekomendasi', [RekomendasiController::class, 'rekomendasi']);
 Route::get('/penjelajahan', [PenjelajahanController::class, 'browsing']);
