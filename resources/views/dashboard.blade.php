@@ -19,7 +19,7 @@
     </div>
 </div>
 <div class="row">
-@foreach($handphone as $hp)
+@foreach($dataHandphone as $hp)
     <div class="col-lg-3 col-md-6 col-sm-6 mb-2 justify-content-center">
         <div class="card">
             <img src="img/handphone/{{ $hp['gambar'] }}" class="card-img-top" alt="..." style="width:200px; height:200px;">
@@ -32,5 +32,48 @@
         </div>
     </div>
 @endforeach
+<div class="mt-4 d-flex justify-content-center">
+    @if ($dataHandphone->hasPages())
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            @if ($dataHandphone->onFirstPage())
+                <li class="page-item">
+                    <a class="page-link disabled" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            @else
+                <li class="page-item">
+                    <a class="page-link" href="{{ $dataHandphone->previousPageUrl() }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            @endif
+            @for ($i=1;$i<=$dataHandphone->lastPage();$i++)
+                @if ($dataHandphone->currentPage() == $i)
+                    <li class="page-item active"><a class="page-link" href="{{ $dataHandphone->url($i) }}">{{ $i }}</a></li>
+                @else
+                    <li class="page-item"><a class="page-link" href="{{ $dataHandphone->url($i) }}">{{ $i }}</a></li>    
+                @endif
+            @endfor
+            
+            @if ($dataHandphone->hasMorePages())
+            <li class="page-item">
+                <a class="page-link" href="{{ $dataHandphone->nextPageUrl() }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            @else
+                <li class="page-item">
+                    <a class="page-link disabled" aria-label="Previous">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            @endif
+        </ul>
+    </nav>
+@endif
+</div>
 </div> 
+
 @endsection

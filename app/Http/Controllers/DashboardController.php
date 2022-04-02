@@ -1,16 +1,22 @@
 <?php
 namespace App\Http\Controllers;
 
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
+
 class DashboardController extends Controller 
 {
     public function index()
     {
         $data=$this->showCardHandphone(1000);
         $totalData=count($data);
+        $dataHandphone = $this->paginate($data)->withQueryString()->withPath('/dashboard');
         return view('dashboard', [
             "title" => 'Dashboard',
             "page" => "dashboard",
             "handphone" => $data,
+            "dataHandphone" => $dataHandphone,
             "count" => $totalData
         ]);
     }
@@ -39,6 +45,19 @@ class DashboardController extends Controller
             ]);
         }
         return $result;
+    }
+
+    public function paginate($items, $perPage = 12, $page = null, $options = [])
+    {
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator(
+            $items->forPage($page, $perPage),
+            $items->count(),
+            $perPage,
+            $page,
+            $options
+        );
     }
 
 }
