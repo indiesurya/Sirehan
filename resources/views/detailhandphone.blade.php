@@ -8,10 +8,10 @@
 @foreach ($detail as $dtl)
 <div class="card mb-3">
     <div class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-4 ml-3 mr-3 mb-3">
         <img src="{{ asset('img/handphone/'.$dtl['gambar'])}}" class="img-fluid rounded-start mt-3" alt="...">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
         <div class="card-body">
             <h3 class="card-title mb-4">{{ $dtl['nama']}}</h3>
             <h5 class="mb-3">Spesification :</h5>
