@@ -14,7 +14,7 @@ class RekomendasiController extends Controller
             $bobotUser = $this->getBobotUser($request->bobotKamera, $request->bobotHarga, $request->bobotUl, $request->bobotBaterai, $request->bobotAplikasi);
             //END INPUTAN USER
             $sql = $handphone[1];
-            $jumlahCari = count($handphone);
+            $jumlahCari = count($handphone[0]);
             if($jumlahCari == 0)
             {
                 $resultSpesifikasi = [];
