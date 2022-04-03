@@ -121,22 +121,22 @@ class RekomendasiController extends Controller
         } 
         else if ($hobiFotografi == '0') 
         {
-            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb .?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb > 48)';
+            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb .?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb >= 48)';
         } 
         else if ($hobiFotografi == '1') 
         {
-            $sql = $sql . '.?hp handphone:memilikiKameraDepan ?kd .?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd > 20)';
+            $sql = $sql . '.?hp handphone:memilikiKameraDepan ?kd .?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd >= 20)';
         } 
         else if ($hobiFotografi == '2') 
         {
-            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb.?hp handphone:memilikiKameraDepan ?kd .?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb > 48).?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd > 20)';
+            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb.?hp handphone:memilikiKameraDepan ?kd .?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb >= 48).?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd >= 20)';
         } 
         else if ($hobiFotografi == '3') {
-            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb.?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb <= 48)';
+            $sql = $sql . '.?hp handphone:memilikiKameraBelakang ?kb.?kb handphone:nilaiKameraBelakang ?nilaiKb FILTER(?nilaiKb < 48)';
         } 
         else 
         {
-            $sql = $sql . '.?hp handphone:memilikiKameraDepan ?kd. ?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd <= 20)';
+            $sql = $sql . '.?hp handphone:memilikiKameraDepan ?kd. ?kd handphone:nilaiKameraDepan ?nilaiKd FILTER(?nilaiKd < 20)';
         }
 
         //Query untuk mencari budget pembelian
