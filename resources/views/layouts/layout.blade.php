@@ -23,7 +23,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <img src="{{ asset("img/logo.png") }}" style="width:60px;"alt="">
                 </div>
-                <div class="sidebar-brand-text mr-4">SIREHAN</div>
+                <div class="sidebar-brand-text mr-4">SIREHANS</div>
             </a>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item <?php if($page=='dashboard') : echo "active"; endif; ?>">
