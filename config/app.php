@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://sirehan.herokuapp.com/'),
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -119,7 +119,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => 'base64:IATumBr4zZ0JKOZTx5Mpvg9Ps2h2x/ROaYatboMvz0E=',
 
     'cipher' => 'AES-256-CBC',
 
