@@ -1,10 +1,6 @@
 @extends('layouts.layout')
 @section('container')
-<style>
-    p span{
-        font-weight: bold;
-    }
-</style>
+
 @foreach ($detail as $dtl)
 <div class="card mb-3">
     <div class="row g-0">
