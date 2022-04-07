@@ -24,3 +24,4 @@ Route::get('/rekomendasi', [RekomendasiController::class, 'rekomendasi']);
 Route::get('/penjelajahan', [PenjelajahanController::class, 'browsing']);
 Route::get('/dashboard',[DashboardController::class, 'index']);
 Route::get('/detail_handphone/{nama_handphone}', [HandphoneController::class, 'detail']);
+Route::get('/jelajah/{kriteria}/{jelajah}',[PenjelajahanController::class,'jelajah']);
