@@ -220,7 +220,7 @@
                     @foreach($handphone as $item)
                     <div class="col-md-6 col-sm-6 col-lg-3">
                         <div class="card mb-3">
-                        <img src="img/handphone/{{ $item['gambar'] }}" class="card-img-top"style="width:200px; height:200px;" alt="...">
+                        <img src="img/handphone/{{ $item['gambar'] }}" class="card-img-top mx-auto d-block"style="width:200px; height:200px;" alt="...">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">{{ str_replace('_',' ',$item['nama_handphone'])  }}</h5>
                             <p class="card-text fw-lighter fs-6">{{ $item['harga'] }}</p>
