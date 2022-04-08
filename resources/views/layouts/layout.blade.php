@@ -103,7 +103,7 @@
             <footer class="sticky-footer bg-white mb-0">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SIREHAN</span>
+                        <span>&copy; SIREHAN</span>
                     </div>
                 </div>
             </footer>

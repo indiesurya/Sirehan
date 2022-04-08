@@ -235,7 +235,7 @@
     </div>
     <div class="container-fluid shadow-lg pb-1">
         <footer class="d-flex flex-wrap align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 col-sm-12 mb-0 text-muted">&copy; 2022 Sirehan</p>
+            <p class="col-md-4 col-sm-12 mb-0 text-muted">&copy; Sirehan</p>
 
             <ul class="nav col-md-4 col-sm-12 offset-md-4">
             <li class="nav-item"><a href="#home" class="nav-link px-2 text-muted">Home</a></li>
