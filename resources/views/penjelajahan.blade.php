@@ -27,6 +27,7 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headAplikasi">Aplikasi</h6>
             </div>
             <div class="card-body" id="bodyAplikasi">
+                <div class="row">
                 @foreach ($data['data']['listAplikasi'] as $item)
                 <div class="col-md-3 d-inline-block">
                 <ul class="list-group list-group-flush">
@@ -34,6 +35,7 @@
                 </ul>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -46,6 +48,7 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headMemori">Memori</h6>
             </div>
             <div class="card-body" id="bodyMemori">
+                <div class="row">
                 @foreach ($data['data']['listMemori'] as $item)
                 <div class="col-md-2 d-inline-block">
                 <ul class="list-group list-group-flush">
@@ -53,6 +56,7 @@
                 </ul>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -64,6 +68,7 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headRAM">RAM</h6>
             </div>
             <div class="card-body" id="bodyRAM">
+                <div class="row">
                 @foreach ($data['data']['listRAM'] as $item)
                 <div class="col-md-2 d-inline-block">
                 <div class="list-group list-group-flush">
@@ -71,6 +76,7 @@
                 </div>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -82,6 +88,7 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headBaterai">Baterai</h6>
             </div>
             <div class="card-body" id="bodyBaterai">
+                <div class="row">
                 @foreach ($data['data']['listBaterai'] as $item)
                 <div class="col-md-2 d-inline-block">
                 <ul class="list-group list-group-flush">
@@ -89,6 +96,7 @@
                 </ul>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -98,13 +106,15 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headSistemOperasi">Sistem Operasi</h6>
             </div>
             <div class="card-body" id="bodySistemOperasi">
+                <div class="row">
                 @foreach ($data['data']['listSistemOperasi'] as $item)
-                <div class="col-md-3 d-inline-block">
+                <div class="col-md-2 d-inline-block">
                 <ul class="list-group list-group-flush">
                     <a href="/jelajah/{{'SistemOperasi'}}/{{$item['sistemOperasi']}}" class="list-group-item list-group-item-action">{{ str_replace('_',' ',$item['sistemOperasi']) }}</li></a>
                 </ul>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -116,13 +126,15 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headKameraBelakang">Kamera Belakang</h6>
             </div>
             <div class="card-body" id="bodyKameraBelakang">
+                <div class="row">
                 @foreach ($data['data']['listKameraBelakang'] as $item)
-                <div class="col-md-3 d-inline-block">
+                <div class="col-md-2 d-inline-block">
                 <ul class="list-group list-group-flush">
                     <a href="/jelajah/{{'KameraBelakang'}}/{{$item['kameraBelakang']}}" class="list-group-item list-group-item-action">{{ str_replace('KB_',' ',$item['kameraBelakang']) }} MP</li></a>
                 </ul>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -132,13 +144,15 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headKameraDepan">Kamera Depan</h6>
             </div>
             <div class="card-body" id="bodyKameraDepan">
+                <div class="row">
                 @foreach ($data['data']['listKameraDepan'] as $item)
-                <div class="col-md-3 d-inline-block">
+                <div class="col-md-2 d-inline-block">
                 <ul class="list-group list-group-flush">
                     <a href="/jelajah/{{'KameraDepan'}}/{{$item['kameraDepan']}}" class="list-group-item list-group-item-action">{{ str_replace('KD_',' ',$item['kameraDepan']) }} MP</li></a>
                 </ul>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -150,13 +164,15 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headUkuranLayar">Ukuran Layar</h6>
             </div>
             <div class="card-body" id="bodyUkuranLayar">
+                <div class="row">
                 @foreach ($data['data']['listUkuranLayar'] as $item)
-                <div class="col-md-3 d-inline-block">
+                <div class="col-md-2 d-inline-block">
                 <ul class="list-group list-group-flush">
                     <a href="/jelajah/{{'UkuranLayar'}}/{{$item['ukuranLayar']}}" class="list-group-item list-group-item-action">{{ str_replace('UkuranLayar_',' ',$item['ukuranLayar']) }} inch</li></a>
                 </ul>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -166,7 +182,8 @@
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary" id="headProsesor">Prosesor</h6>
             </div>
-            <div class="card-body" id="bodyProsesor">
+            <div class="card-body d-flex" id="bodyProsesor">
+                <div class="row">
                 @foreach ($data['data']['listProsesor'] as $item)
                 <div class="col-md-3 d-inline-block">
                 <ul class="list-group list-group-flush">
@@ -174,6 +191,7 @@
                 </ul>
                 </div>
                 @endforeach
+                </div>
             </div>
         </div>
     </div>
@@ -186,31 +204,21 @@
                 <h6 class="m-0 font-weight-bold text-primary" id="headMerek">Merek</h6>
             </div>
             <div class="card-body" id="bodyMerek">
+                <div class="row">
                 @foreach ($data['data']['listMerek'] as $item)
                 <div class="col-md-3 d-inline-block">
                 <ul class="list-group list-group-flush">
                     <a href="/jelajah/{{ 'Merek' }}/{{$item['merek']}}" class="list-group-item list-group-item-action">{{ str_replace('Merek_',' ',$item['merek']) }}</li></a>
                 </ul>
                 </div>
-                @endforeach
+                @endforeach 
+                </div>  
             </div>
         </div>
     </div>
 </div>
 @endif
 
-    {{-- @if($data['resp']>=1 && $data['jumlahbrowse']>=1)
-    <div class="col-lg-6 mb-4 ">
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Proses SPARQL</h6>
-            </div>
-            <div class="card-body">
-                <h4 class="small">{{ $data['sql'] }}</h4>
-            </div>
-        </div>
-    </div>
-    @endif --}}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){

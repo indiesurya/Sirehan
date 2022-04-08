@@ -4,8 +4,8 @@
 @foreach ($detail as $dtl)
 <div class="card mb-3">
     <div class="row g-0">
-        <div class="col-md-4     mb-3">
-        <img src="{{ asset('img/handphone/'.$dtl['gambar'])}}" class="img-fluid rounded-start mt-3" alt="...">
+        <div class="col-md-4 mb-3">
+        <img src="{{ asset('img/handphone/'.$dtl['gambar'])}}" class="img-fluid rounded-start mt-3 px-2" alt="...">
         </div>
         <div class="col-md-7">
         <div class="card-body">
