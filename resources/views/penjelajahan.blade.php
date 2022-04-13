@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="input-group mb-3">
-                <label class="input-group-text">Merek</label>
+                <label class="input-group-text">Kriteria</label>
                 <select class="form-select" aria-label="Default select example" id="browse" name="browse">
                     <option value="">Pilihlah salah satu</option>
                         <option value="aplikasi">Aplikasi</option>
