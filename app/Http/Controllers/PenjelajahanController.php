@@ -156,7 +156,8 @@ class PenjelajahanController extends Controller
 
     public function jelajah($kriteria, $jelajah){
         if($kriteria == 'Aplikasi'){
-            $minimumRequirement = $this->sparql->query('SELECT * WHERE{VALUES ?aplikasi{handphone:'.$jelajah.'}?aplikasi handphone:minMemori ?minMemori .?aplikasi handphone:minRAM ?minRAM .?aplikasi handphone:minSistemOperasi ?minSO .?aplikasi handphone:minProsesor ?minProsesor }');
+            $sqli = 'SELECT * WHERE{VALUES ?aplikasi{handphone:' . $jelajah . '}?aplikasi handphone:minMemori ?minMemori .?aplikasi handphone:minRAM ?minRAM .?aplikasi handphone:minSistemOperasi ?minSO .?aplikasi handphone:minProsesor ?minProsesor }';
+            $minimumRequirement = $this->sparql->query($sqli);
             $rowReq = [];
             foreach ($minimumRequirement as $item) {
                 array_push($rowReq, [
@@ -166,10 +167,12 @@ class PenjelajahanController extends Controller
                     'minRAM' => $this->parseData($item->minRAM->getValue())
                 ]);
             }
-            $handphone = $this->sparql->query('SELECT * WHERE{?hp handphone:memilikiGambar ?gambar.?hp handphone:nilaiHarga ?harga .?hp handphone:memilikiRAM ?ram .?ram handphone:nilaiRAM ?nilaiRAM FILTER(?nilaiRAM >= '.$rowReq[0]['minRAM']. ').?hp handphone:memilikiMemori ?memori .?memori handphone:nilaiMemori ?nilaiMemori FILTER(?nilaiMemori >= ' . $rowReq[0]['minMemori'] . ').?hp handphone:memilikiProsesor ?prosesor .?prosesor handphone:nilaiProsesor ?nilaiProsesor FILTER(?nilaiProsesor >= ' . $rowReq[0]['minProsesor'] . ').?hp handphone:memilikiSistemOperasi ?so .?so handphone:nilaiSistemOperasi ?nilaiSO FILTER(?nilaiSO >= ' . $rowReq[0]['minSO'] . ')}');
+            $sql= 'SELECT * WHERE{?hp handphone:memilikiGambar ?gambar.?hp handphone:nilaiHarga ?harga .?hp handphone:memilikiRAM ?ram .?ram handphone:nilaiRAM ?nilaiRAM FILTER(?nilaiRAM >= ' . $rowReq[0]['minRAM'] . ').?hp handphone:memilikiMemori ?memori .?memori handphone:nilaiMemori ?nilaiMemori FILTER(?nilaiMemori >= ' . $rowReq[0]['minMemori'] . ').?hp handphone:memilikiProsesor ?prosesor .?prosesor handphone:nilaiProsesor ?nilaiProsesor FILTER(?nilaiProsesor >= ' . $rowReq[0]['minProsesor'] . ').?hp handphone:memilikiSistemOperasi ?so .?so handphone:nilaiSistemOperasi ?nilaiSO FILTER(?nilaiSO >= ' . $rowReq[0]['minSO'] . ')}';
+            $handphone = $this->sparql->query($sql);
         }
         else{
-            $handphone = $this->sparql->query('SELECT * WHERE{?hp handphone:memiliki' . $kriteria . ' handphone:' . $jelajah . ' .?hp handphone:nilaiHarga ?harga .?hp handphone:memilikiGambar ?gambar} ORDER BY ?hp');
+            $sql = 'SELECT * WHERE{?hp handphone:memiliki' . $kriteria . ' handphone:' . $jelajah . ' .?hp handphone:nilaiHarga ?harga .?hp handphone:memilikiGambar ?gambar} ORDER BY ?hp';
+            $handphone = $this->sparql->query($sql);
         }
         $resultHandphone = [];
         foreach ($handphone as $item) {
@@ -181,7 +184,8 @@ class PenjelajahanController extends Controller
         }
         $data = [
             'listHandphone' => $resultHandphone,
-            'count' => count($resultHandphone)
+            'count' => count($resultHandphone),
+            'sql' => $sql
         ];
         return view('jelajah', [
             'title' => 'Hasil Penjelajahan',

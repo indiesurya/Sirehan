@@ -19,6 +19,18 @@
     </div>
 </div>
 <div class="row">
+    <div class="row">
+        <div class="col-lg-6 mb-4 mt-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Proses SPARQL</h6>
+                </div>
+                <div class="card-body">
+                    <h4 class="small">{{ $data['sql'] }}<span> </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 @foreach($data['listHandphone'] as $hp)
     <div class="col-lg-3 col-md-6 col-sm-6 mb-2 justify-content-center">
         <div class="card">
