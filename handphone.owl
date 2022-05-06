@@ -1,0 +1,2947 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/indiesurya/ontologies/2021/8/untitled-ontology-13#"
+     xml:base="http://www.semanticweb.org/indiesurya/ontologies/2021/8/untitled-ontology-13"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:OntologiHandphone="http://www.semanticweb.org/OntologiHandphone#"
+     xmlns:OntologiHandphone1="http://www.semanticweb.org/indiesurya/OntologiHandphone#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiBaterai -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiBaterai">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiKameraBelakang -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiKameraBelakang">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiKameraDepan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiKameraDepan">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiMemori -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiMemori">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiMerek -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiMerek">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiProsesor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiProsesor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiRAM -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiRAM">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiSistemOperasi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiSistemOperasi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiUkuranLayar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiUkuranLayar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiGambar -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#memilikiGambar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#minMemori -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#minMemori">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#minProsesor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#minProsesor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#minRAM -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#minRAM">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#minSistemOperasi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#minSistemOperasi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiBaterai -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiBaterai">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiDayaTahan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiDayaTahan"/>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiHarga -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiHarga">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiKameraBelakang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiKameraBelakang">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiKameraDepan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiKameraDepan">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiMemori -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiMemori">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiProsesor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiProsesor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiRAM -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiRAM">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiSistemOperasi -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiSistemOperasi">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiUkuranLayar -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#nilaiUkuranLayar">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Kamera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kamera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kamera"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kamera"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Unisoc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Unisoc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#ARK_Survival_Evolved -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#ARK_Survival_Evolved">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1455</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_4.4.4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_4.4.4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.44</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_5.1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_5.1.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.11</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_6.0.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_6.0.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.01</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#SistemOperasi"/>
+        <OntologiHandphone1:nilaiSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</OntologiHandphone1:nilaiSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Asphalt_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Asphalt_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1361</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.9</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Asus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Asus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Asus_ROG_V_5G_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Asus_ROG_V_5G_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_6000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_24"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Asus"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_888_5G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.78"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asusrogv.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_10090 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_10090">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10090</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_3000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_3000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_3050 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_3050">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3050</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_3120 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_3120">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3120</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_3300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_3300">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3300</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4000</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4025 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4025">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4025</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4030 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4030">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4030</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4230 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4230">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4230</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4250 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4250">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4250</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4300 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4300">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4300</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4310 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4310">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4310</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4500 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4500">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4500</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5020</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5100</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5160 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5160">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5160</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5870 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5870">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5870</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_6000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_6000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_7040 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_7040">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7040</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_7250 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_7250">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai"/>
+        <OntologiHandphone1:nilaiBaterai rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7250</OntologiHandphone1:nilaiBaterai>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Black_Dessert_Mobile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Black_Dessert_Mobile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Call_of_Duty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Call_of_Duty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Chrome -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Chrome">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Dana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Dana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">115</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.4</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Discord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Discord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_850 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_850">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">955</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_9611 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_9611">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1215</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_990 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_990">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2734</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Fortnite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Fortnite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2195</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Gangstar_New_Orleans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Gangstar_New_Orleans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1307</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Genshin_Impact -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Genshin_Impact">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2195</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.1</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Gojek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Gojek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">187</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Harga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Harga">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Honkai_Impact_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Honkai_Impact_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1326</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei_MatePad_4GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei_MatePad_4GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_7250"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_8"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_820"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_10.4"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">huaweimatepad.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4499000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei_MatePad_Pro_6GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei_MatePad_Pro_6GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_7250"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_990"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_6"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_10.8"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">huaweimatepadpro.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8699000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei_MatePad_T10_Kids_Edition_2GB_32GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei_MatePad_T10_Kids_Edition_2GB_32GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5100"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_5"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_2"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_710A"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_2"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_9.7"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">huaweimatepadt10.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2899000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei_MatePad_T8_2GB_32GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei_MatePad_T8_2GB_32GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5100"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_5"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_2"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Huawei"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_MT8768"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_2"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_8"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">huaweimatepadt8.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1649000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Instagram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Instagram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_108 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_108">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">108.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraBelakang"/>
+        <OntologiHandphone1:nilaiKameraBelakang rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</OntologiHandphone1:nilaiKameraBelakang>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_2.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_2.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.1</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">44.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_64">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KameraDepan"/>
+        <OntologiHandphone1:nilaiKameraDepan rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</OntologiHandphone1:nilaiKameraDepan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Kamera_Belakang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kamera_Belakang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Kamera_Depan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kamera_Depan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_710A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_710A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1156</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_820 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_820">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2473</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_990 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin_990">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kirin"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3084</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Life_After -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Life_After">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Lightroom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Lightroom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Line -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Line">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">263</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Maxim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Maxim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_1100_5G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_1100_5G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3300</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_700_5G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_700_5G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1738</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_800U -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_800U">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1837</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">685</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1312</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1307</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G85 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G85">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1271</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G95 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G95">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1614</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">975</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1406</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P95 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P95">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1514</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_MT6739W -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_MT6739W">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">348</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_MT8768 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_MT8768">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">748</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori"/>
+        <OntologiHandphone1:nilaiMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128000</OntologiHandphone1:nilaiMemori>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori"/>
+        <OntologiHandphone1:nilaiMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16000</OntologiHandphone1:nilaiMemori>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_256 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_256">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori"/>
+        <OntologiHandphone1:nilaiMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256000</OntologiHandphone1:nilaiMemori>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori"/>
+        <OntologiHandphone1:nilaiMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32000</OntologiHandphone1:nilaiMemori>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_512 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_512">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori"/>
+        <OntologiHandphone1:nilaiMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512000</OntologiHandphone1:nilaiMemori>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_64">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori"/>
+        <OntologiHandphone1:nilaiMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64000</OntologiHandphone1:nilaiMemori>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Mobile_Legends -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Mobile_Legends">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1361</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_A15_2GB_32GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_A15_2GB_32GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4230"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_2"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.52"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oppoa15.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1699000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_A16_3GB_32GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_A16_3GB_32GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G35"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_3"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.52"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oppoa16.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_A54_6GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_A54_6GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_6"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.51"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oppoa54.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3099000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_Reno6_LTE_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_Reno6_LTE_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4310"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_44"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_720G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.4"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">opporeno6.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5199000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_Reno_5F_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo_Reno_5F_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4310"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_32"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Oppo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P95"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.43"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">opporeno5f.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4299000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#PES_Mobile_2021 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#PES_Mobile_2021">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">413</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.11</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#PUBG_Mobile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#PUBG_Mobile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1396</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_M3_4GB_64GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_M3_4GB_64GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_6000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_64"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_662"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.53"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pocom3.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1899000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_M3_Pro_5G_4GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_M3_Pro_5G_4GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_700_5G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pocom3pro.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_M3_Pro_5G_4GB_64GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_M3_Pro_5G_4GB_64GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_64"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_700_5G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pocom3pro.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2699000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_X3_GT_5G_8GB_256GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_X3_GT_5G_8GB_256GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_256"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_1100_5G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.6"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pocox3gt.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4799000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_X3_NFC_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_X3_NFC_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5160"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_20"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_732G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.67"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pocox3nfc.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3399000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_X3_Pro_6GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco_X3_Pro_6GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5160"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_20"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Poco"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_860"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_6"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.67"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pocox3pro.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3599000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Prosesor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_425 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_425">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">413</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_615 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_615">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">392</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_652 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_652">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">981</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_660 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_660">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1326</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_662 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_662">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1397</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_720G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_720G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1711</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_732G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_732G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1792</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_750G_5G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_750G_5G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_801 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_801">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">578</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_860 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_860">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2588</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_865 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_865">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3467</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_870 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_870">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3411</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_870_5G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_870_5G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3411</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_888_5G -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_888_5G">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3730</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM"/>
+        <OntologiHandphone1:nilaiRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</OntologiHandphone1:nilaiRAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM"/>
+        <OntologiHandphone1:nilaiRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</OntologiHandphone1:nilaiRAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM"/>
+        <OntologiHandphone1:nilaiRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</OntologiHandphone1:nilaiRAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM"/>
+        <OntologiHandphone1:nilaiRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</OntologiHandphone1:nilaiRAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM"/>
+        <OntologiHandphone1:nilaiRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</OntologiHandphone1:nilaiRAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM"/>
+        <OntologiHandphone1:nilaiRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</OntologiHandphone1:nilaiRAM>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Ragnarok_Mobile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Ragnarok_Mobile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1361</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Real_Racing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Real_Racing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1727</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_8_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_8_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G95"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.4"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realme8pro.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3599000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_8_Pro_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_8_Pro_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4500"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_108"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_720G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.4"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realme8pro.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4299000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_C21Y_4GB_64GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_C21Y_4GB_64GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_64"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Unisoc_T610"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realmec21y.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1799000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_C25_4GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_C25_4GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_6000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G70"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realmec25.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2299000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_C25s_4GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme_C25s_4GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_6000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Realme"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G85"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realmec25s.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2399000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_A02_3GB_32GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_A02_3GB_32GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_MT6739W"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_3"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxy02.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1499000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_A03S_4GB_64GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_A03S_4GB_64GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_64"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.51"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxya03s.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1799000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_A22_LTE_6GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_A22_LTE_6GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_13"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G80"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_6"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.4"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxya22.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Note20_Ultra_5G_12GB_512GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Note20_Ultra_5G_12GB_512GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4500"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_108"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_10"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_512"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_990"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_12"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.9"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxynote20ultra.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Note20_Ultra_8GB_512GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Note20_Ultra_8GB_512GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4500"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_108"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_10"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_512"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_990"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.9"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxynote20ultra.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_S20_FE_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_S20_FE_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4500"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_12"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_32"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_990"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxys20fe.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_S20_FE_8GB_256GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_S20_FE_8GB_256GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4500"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_12"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_32"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_256"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_990"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxys20fe.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Tab_S6_Lite_LTE_4GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Tab_S6_Lite_LTE_4GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_7040"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_8"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Exynos_9611"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_10.4"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxytabs6.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6499000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Tab_S7_FE_5G_6GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Tab_S7_FE_5G_6GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_10090"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_8"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_750G_5G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_6"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_12.4"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxytabs7.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9499000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Tab_S7plus_8GB_256GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung_Galaxy_Tab_S7plus_8GB_256GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_10090"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_256"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Samsung"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_865"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_12.4"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samsunggalaxytabs7plus.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Shopee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Shopee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">193</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Sistem_Operasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Sistem_Operasi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Super_Mecha_Champions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Super_Mecha_Champions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.1</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#TMRW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#TMRW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_10.4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_10.4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.4</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_10.8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_10.8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.8</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_12.4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_12.4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.4</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_5.7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_5.7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.7</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.22</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.3</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.4</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.43">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.43</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.44</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.47">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.47</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.5</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.51">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.51</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.52 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.52">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.52</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.53</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.55</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.56</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.58 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.58">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.58</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.6</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.67 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.67">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.67</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.7</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.78 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.78">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.78</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.9</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_9.7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_9.7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar"/>
+        <OntologiHandphone1:nilaiUkuranLayar rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.7</OntologiHandphone1:nilaiUkuranLayar>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Ukuran_Layar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Ukuran_Layar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Kriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Unisoc_T610 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Unisoc_T610">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Unisoc"/>
+        <OntologiHandphone1:nilaiProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1337</OntologiHandphone1:nilaiProsesor>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_V21_5G_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_V21_5G_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_44"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Dimensity_800U"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.44"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivov21.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5799000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_V21_LTE_8GB_256GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_V21_LTE_8GB_256GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_44"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_256"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_720G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.44"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivov21lte.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4399000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_X60_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_X60_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4300"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_32"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_870_5G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.56"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivox60.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y1S_2GB_32GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y1S_2GB_32GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4030"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_2"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.22"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivoy1s.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1499000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y20_2021_4GB_64GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y20_2021_4GB_64GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_64"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.51"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivoy20.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2199000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y21s_4GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y21s_4GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.51"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivoy21s.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2799000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y30i_4GB_64GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y30i_4GB_64GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_64"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_P35"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_4"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.47"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivoy30.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2399000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y53s_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo_Y53s_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Vivo"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G80"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.58"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vivoy53s.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3699000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Webex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Webex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2195</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Whatsapp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Whatsapp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.03</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Merek"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Black_Shark_4_5G_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Black_Shark_4_5G_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4500"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_48"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_20"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_870_5G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.67"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xiaomiblackshark4.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8499000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Mi_11_Lite_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Mi_11_Lite_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_4250"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_732G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.55"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xiaomimi11lite.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4099000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Redmi_9A_2GB_32GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Redmi_9A_2GB_32GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5000"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_5"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G25"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_2"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.53"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xiaomiredmi9a.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1249000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Redmi_9_3GB_32GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Redmi_9_3GB_32GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5020"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_13"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_8"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_32"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#MediaTek_Helio_G80"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_3"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.53"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xiaomiredmi9.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1649000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Redmi_Note_10_Pro_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Redmi_Note_10_Pro_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5020"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_108"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiMerek rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_732G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_11"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.67"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xiaomiredminote10pro.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39999000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Redmi_Note_9_Pro_8GB_128GB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Xiaomi_Redmi_Note_9_Pro_8GB_128GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Handphone"/>
+        <OntologiHandphone1:memilikiBaterai rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Baterai_5020"/>
+        <OntologiHandphone1:memilikiKameraBelakang rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KB_64"/>
+        <OntologiHandphone1:memilikiKameraDepan rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#KD_16"/>
+        <OntologiHandphone1:memilikiMemori rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Memori_128"/>
+        <OntologiHandphone1:memilikiProsesor rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Qualcomm_Snapdragon_720G"/>
+        <OntologiHandphone1:memilikiRAM rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#RAM_8"/>
+        <OntologiHandphone1:memilikiSistemOperasi rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Android_10"/>
+        <OntologiHandphone1:memilikiUkuranLayar rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#UkuranLayar_6.67"/>
+        <OntologiHandphone1:memilikiGambar rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xiaomiredminote9pro.jpg</OntologiHandphone1:memilikiGambar>
+        <OntologiHandphone1:nilaiDayaTahan rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</OntologiHandphone1:nilaiDayaTahan>
+        <OntologiHandphone1:nilaiHarga rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3599000</OntologiHandphone1:nilaiHarga>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Youtube -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Youtube">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">249</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/indiesurya/OntologiHandphone#Zoom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/indiesurya/OntologiHandphone#Zoom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/indiesurya/OntologiHandphone#Aplikasi"/>
+        <OntologiHandphone1:minMemori rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</OntologiHandphone1:minMemori>
+        <OntologiHandphone1:minProsesor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1727</OntologiHandphone1:minProsesor>
+        <OntologiHandphone1:minRAM rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</OntologiHandphone1:minRAM>
+        <OntologiHandphone1:minSistemOperasi rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</OntologiHandphone1:minSistemOperasi>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
